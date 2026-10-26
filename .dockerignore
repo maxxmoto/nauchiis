@@ -1,0 +1,11 @@
+.git
+.gitattributes
+.gitignore
+*.md
+cat_warning.png
+cat_relax.png
+cat_ai.png
+footer.png
+claude-color.svg
+favicon-preview.png
+*.log

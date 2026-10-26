@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://maxxmoto.github.io/nauchiis/sitemap.xml
+Sitemap: https://xn--80aqaqb1b2a.xn--p1ai/sitemap.xml
