@@ -1,0 +1,28 @@
+{
+  "name": "научИИсь — практический гид по вайбкодингу",
+  "short_name": "научИИсь",
+  "description": "51 статья об AI-инструментах, разработке, безопасности, продажах, праве и запуске проектов.",
+  "lang": "ru",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#ffffff",
+  "theme_color": "#0066ff",
+  "categories": ["education", "technology", "productivity"],
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

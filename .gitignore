@@ -1,0 +1,15 @@
+# Source images (site uses optimized webp versions)
+cat_warning.png
+cat_relax.png
+cat_ai.png
+footer.png
+favicon-preview.png
+claude-color.svg
+
+# Local / OS
+.env
+.env.*
+*.local.json
+Thumbs.db
+.DS_Store
+*.log

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-label="научИИсь — кот Маркус">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0066ff"/>
+      <stop offset="1" stop-color="#7c5cff"/>
+    </linearGradient>
+  </defs>
+  <rect x="40" y="40" width="944" height="944" rx="220" fill="url(#g)"/>
+  <polygon points="260,440 315,175 485,330" fill="#fff"/>
+  <polygon points="764,440 709,175 539,330" fill="#fff"/>
+  <circle cx="315" cy="175" r="20" fill="#fff"/>
+  <circle cx="709" cy="175" r="20" fill="#fff"/>
+  <polygon points="315,395 345,255 440,330" fill="#cfe4ff"/>
+  <polygon points="709,395 679,255 584,330" fill="#cfe4ff"/>
+  <ellipse cx="512" cy="590" rx="302" ry="290" fill="#fff"/>
+  <g stroke="#6b7f9e" stroke-width="9" stroke-linecap="round" opacity=".82">
+    <line x1="250" y1="650" x2="135" y2="625"/>
+    <line x1="250" y1="705" x2="135" y2="715"/>
+    <line x1="774" y1="650" x2="889" y2="625"/>
+    <line x1="774" y1="705" x2="889" y2="715"/>
+  </g>
+  <g stroke="#091a36" stroke-width="22" stroke-linecap="round">
+    <line x1="290" y1="565" x2="225" y2="548"/>
+    <line x1="734" y1="565" x2="799" y2="548"/>
+  </g>
+  <rect x="304" y="514" width="162" height="162" rx="41" fill="#dff5ff" stroke="#091a36" stroke-width="28"/>
+  <rect x="558" y="514" width="162" height="162" rx="41" fill="#dff5ff" stroke="#091a36" stroke-width="28"/>
+  <line x1="480" y1="565" x2="544" y2="565" stroke="#091a36" stroke-width="24" stroke-linecap="round"/>
+  <ellipse cx="395" cy="600" rx="30" ry="30" fill="#091a36"/>
+  <ellipse cx="629" cy="600" rx="30" ry="30" fill="#091a36"/>
+  <circle cx="388" cy="592" r="10" fill="#fff"/>
+  <circle cx="622" cy="592" r="10" fill="#fff"/>
+  <polygon points="488,710 536,710 512,742" fill="#ff8fa3"/>
+  <path d="M478 790 L512 762 L546 790" fill="none" stroke="#091a36" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#fff">
+    <path d="M835 122 L853 192 L923 210 L853 228 L835 298 L817 228 L747 210 L817 192 Z"/>
+    <path d="M910 268 L921 298 L951 310 L921 322 L910 352 L899 322 L869 310 L899 298 Z"/>
+  </g>
+</svg>
