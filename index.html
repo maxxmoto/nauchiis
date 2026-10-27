@@ -139,7 +139,7 @@
   .course-hero-title{font-size:clamp(46px,7vw,78px);line-height:.88;letter-spacing:-.075em;font-weight:900;margin:0 0 18px;color:#111827;}
   .course-hero-title .ii{color:#315cff;}
   .course-hero-text{font-size:16px;line-height:1.45;color:#536079;max-width:370px;margin:0 0 22px;}
-  .course-hero-btn{display:inline-flex;align-items:center;gap:12px;border-radius:17px;padding:13px 17px;background:#fff;box-shadow:0 10px 30px rgba(48,78,140,.16);font-weight:750;color:#22304b;text-decoration:none;font-size:14px;transition:transform .15s,box-shadow .15s;}
+  .course-hero-btn{display:inline-flex;align-items:center;gap:12px;border:0;border-radius:17px;padding:13px 17px;background:#fff;box-shadow:0 10px 30px rgba(48,78,140,.16);font-family:inherit;font-weight:750;color:#22304b;text-decoration:none;font-size:14px;cursor:pointer;transition:transform .15s,box-shadow .15s;}
   .course-hero-btn:hover{transform:translateY(-1px);box-shadow:0 14px 36px rgba(48,78,140,.22);}
   .course-hero-btn .arrow{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:#edf2ff;color:#315cff;}
   [data-theme="dark"] .course-hero{border-color:#263247;box-shadow:0 18px 50px rgba(0,0,0,.35);}
@@ -920,7 +920,7 @@
       '<div class="course-hero-kicker">технологии · ии · будущее</div>' +
       '<div class="course-hero-title">науч<span class="ii">ИИ</span>сь</div>' +
       '<p class="course-hero-text">про искусственный интеллект, технологии и будущее, которое уже рядом</p>' +
-      '<a class="course-hero-btn" href="#article-toc">читай. изучай. применяй. <span class="arrow">→</span></a>' +
+      '<button class="course-hero-btn" type="button" data-scroll-toc>читай. изучай. применяй. <span class="arrow">→</span></button>' +
       '</div></section>';
   }
   function buildTLDR(article, doc, minutes) {
@@ -1364,6 +1364,11 @@
     addPullQuotes(prose);
     addCatToCallout(prose, article.id);
     bindArticleExtras(article);
+    var heroBtn = articleEl.querySelector('.course-hero-btn[data-scroll-toc]');
+    if (heroBtn) heroBtn.addEventListener('click', function() {
+      var toc = document.getElementById('article-toc');
+      if (toc) toc.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
     var ratingBtns = articleEl.querySelectorAll('.rating-btn');
     for (var i = 0; i < ratingBtns.length; i++) {
       ratingBtns[i].addEventListener('click', (function(id, val){ return function(){ rate(id, val); }; })(article.id, ratingBtns[i].getAttribute('data-rating')));
