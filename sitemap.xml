@@ -265,6 +265,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://xn--80aqaqb1b2a.xn--p1ai/?article=high-ticket</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://xn--80aqaqb1b2a.xn--p1ai/?article=refusal</loc>
     <lastmod>2026-10-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -327,6 +333,12 @@
   <url>
     <loc>https://xn--80aqaqb1b2a.xn--p1ai/?article=competitor-analysis</loc>
     <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xn--80aqaqb1b2a.xn--p1ai/?article=networking</loc>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -409,8 +421,20 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://xn--80aqaqb1b2a.xn--p1ai/?article=procrastination</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://xn--80aqaqb1b2a.xn--p1ai/?article=not-ready</loc>
     <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xn--80aqaqb1b2a.xn--p1ai/?article=fear-of-failure</loc>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

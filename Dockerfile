@@ -1,4 +1,4 @@
-# rebuild: source2-68
+# rebuild: source2-72
 FROM python:3.12-slim
 
 ENV PYTHONDONTWRITEBYTECODE=1 \
