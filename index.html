@@ -187,7 +187,7 @@
   [data-theme="dark"] .course-hero-btn .arrow{background:#1c2a41;color:#8ec5ff;}
   @media(max-width:640px){.course-hero{min-height:360px;border-radius:20px;}.course-hero::before{background:linear-gradient(0deg,rgba(247,251,255,.98) 0%,rgba(247,251,255,.82) 48%,rgba(247,251,255,.06) 100%);}.course-hero-inner{max-width:100%;padding:24px 20px;}.course-hero-title{font-size:clamp(48px,14vw,64px);}.course-hero-text{font-size:14px;max-width:310px;}[data-theme="dark"] .course-hero::before{background:linear-gradient(0deg,rgba(11,15,23,.98) 0%,rgba(11,15,23,.82) 48%,rgba(11,15,23,.06) 100%);}}
   .course-og{width:100%;max-width:420px;margin:0 auto 24px;}
-  .course-og img,.prose .course-og img{display:block;width:100%;height:auto;border-radius:14px;border:1px solid var(--border);}
+  .course-og img,.prose .course-og img{display:block;width:100%;height:auto;border:0;border-radius:14px;background:transparent;}
   @media(max-width:640px){.course-og{max-width:100%;}}
   .quote-photo{position:relative;overflow:hidden;display:flex;align-items:center;min-height:340px;margin:24px 0;padding:24px 250px 24px 24px;border-radius:16px;background:linear-gradient(135deg,#f5f9ff,#fff);border:1px solid #dbeafe;}
   .quote-photo blockquote{font-size:clamp(20px,2.8vw,28px);line-height:1.35;font-weight:800;color:#0b3b7a;letter-spacing:-.4px;margin:0;}
@@ -409,7 +409,8 @@
   .table-wrap table{margin:0;box-shadow:none;min-width:520px;}
   .prose{overflow-wrap:break-word;}
   .prose img{max-width:100%;height:auto;border-radius:8px;}
-  .prose img.article-hero-img{display:block;width:100%;height:auto;margin:0 0 24px;border-radius:14px;border:1px solid var(--border);}
+  .prose img.article-hero-img{display:block;width:auto;height:auto;max-width:min(100%,460px);max-height:280px;margin:0 auto 24px;border:0;border-radius:0;object-fit:contain;background:transparent;}
+  @media(max-width:640px){.prose img.article-hero-img{max-width:100%;max-height:220px;}}
   .prose pre{max-width:100%;}
   .content{overflow-x:hidden;}
   .read-remaining{max-width:calc(100vw - 24px);white-space:nowrap;}
@@ -1378,7 +1379,7 @@
     html += '</div><div class="share-feedback" id="shareFeedback" aria-live="polite"></div></div>';
     html += buildTLDR(article, doc, minutes);
     if (article.id === 'course-guide') {
-      html += '<div class="course-og"><img src="static/social/og.webp" alt="научИИсь — обложка курса" loading="lazy" decoding="async"></div>';
+      html += '<div class="course-og"><img src="static/social/og.webp" alt="научИИсь — обложка курса" width="1000" height="597" loading="eager" decoding="async"></div>';
     }
     if (article.id === 'intro') {
       html += '<div class="video-embed"><iframe src="https://vkvideo.ru/video_ext.php?oid=-138398280&amp;id=456241166&amp;hash=9e51925893e3c9e6" width="640" height="360" frameborder="0" allowfullscreen="1" style="background-color:#000" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Видео: Вайбкодинг — полное введение"></iframe></div>';
