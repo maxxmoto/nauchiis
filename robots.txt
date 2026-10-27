@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /api/
 
 Sitemap: https://xn--80aqaqb1b2a.xn--p1ai/sitemap.xml

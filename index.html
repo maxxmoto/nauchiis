@@ -8,6 +8,8 @@
 <meta name="keywords" content="вайбкодинг, vibe coding, AI-инструменты, AI-агенты, Agentic Engineering, OpenCode, Cursor, Claude Code, Codex, субагенты, MCP, hooks, context engineering, RAG, промпт-инжиниринг, разработка с ИИ, нейросети, автоматизация, n8n, Telegram-боты, 152-ФЗ, SEO, Яндекс.Метрика, Яндекс.Директ, фриланс, продажи, ценообразование">
 <meta name="author" content="научИИсь">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="theme-color" content="#0066ff">
 <meta name="color-scheme" content="light">
 <meta name="format-detection" content="telephone=no">
@@ -40,12 +42,17 @@
 <meta property="og:image:width" content="1170">
 <meta property="og:image:height" content="699">
 <meta property="og:image:alt" content="научИИсь — практический гид по вайбкодингу">
+<meta property="article:modified_time" content="2026-10-26">
+<meta property="article:section" content="Основы">
+<meta property="article:tag" content="вайбкодинг">
 <link rel="alternate" hreflang="ru" href="https://xn--80aqaqb1b2a.xn--p1ai/">
 <link rel="alternate" hreflang="x-default" href="https://xn--80aqaqb1b2a.xn--p1ai/">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="научИИсь — практический гид по вайбкодингу и AI-инструментам">
 <meta name="twitter:description" content="61 статья об AI-инструментах, разработке, безопасности, продажах, праве и запуске проектов.">
 <meta name="twitter:image" content="https://xn--80aqaqb1b2a.xn--p1ai/static/social/og.jpg">
+<meta name="twitter:image:width" content="1170">
+<meta name="twitter:image:height" content="699">
 <meta name="twitter:image:alt" content="научИИсь — практический гид по вайбкодингу">
 <script type="application/ld+json">
 {
@@ -53,26 +60,55 @@
   "@graph": [
     {
       "@type": "WebSite",
-      "@id": "./#website",
+      "@id": "https://xn--80aqaqb1b2a.xn--p1ai/#website",
+      "url": "https://xn--80aqaqb1b2a.xn--p1ai/",
       "name": "научИИсь",
+      "alternateName": [
+        "научиим.рф",
+        "nauchiis"
+      ],
       "description": "Практический гид по вайбкодингу и AI-инструментам",
       "inLanguage": "ru",
-      "publisher": { "@id": "./#organization" }
+      "publisher": {
+        "@id": "https://xn--80aqaqb1b2a.xn--p1ai/#organization"
+      }
     },
     {
       "@type": "Organization",
-      "@id": "./#organization",
+      "@id": "https://xn--80aqaqb1b2a.xn--p1ai/#organization",
       "name": "научИИсь",
+      "url": "https://xn--80aqaqb1b2a.xn--p1ai/",
       "description": "Практический гид по вайбкодингу, AI-инструментам, разработке и продажам",
-      "logo": { "@type": "ImageObject", "url": "static/icons/icon-512.png", "width": 512, "height": 512 }
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://xn--80aqaqb1b2a.xn--p1ai/static/icons/icon-512.png",
+        "width": 512,
+        "height": 512
+      },
+      "image": "https://xn--80aqaqb1b2a.xn--p1ai/static/social/og.jpg",
+      "sameAs": [
+        "https://github.com/maxxmoto/nauchiis"
+      ]
     },
     {
       "@type": "CollectionPage",
-      "@id": "./#collection",
+      "@id": "https://xn--80aqaqb1b2a.xn--p1ai/#collection",
+      "url": "https://xn--80aqaqb1b2a.xn--p1ai/",
       "name": "Практический гид по вайбкодингу",
       "description": "61 статья об AI-инструментах, разработке, безопасности, продажах, праве и запуске проектов.",
       "inLanguage": "ru",
-      "isPartOf": { "@id": "./#website" }
+      "isPartOf": {
+        "@id": "https://xn--80aqaqb1b2a.xn--p1ai/#website"
+      },
+      "about": {
+        "@id": "https://xn--80aqaqb1b2a.xn--p1ai/#organization"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://xn--80aqaqb1b2a.xn--p1ai/static/social/og.jpg",
+        "width": 1170,
+        "height": 699
+      }
     }
   ]
 }
@@ -1266,25 +1302,31 @@
     return out;
   }
   function updateArticleSEO(article, doc) {
-    var base = location.href.split('#')[0];
+    var base = location.href.split('#')[0].split('?')[0];
     var assetBase = base.replace(/[^/]*$/, '');
-    var url = base + '#' + article.id;
+    var url = assetBase + '?article=' + encodeURIComponent(article.id);
     var desc = firstParagraphText(doc);
     var minutes = readMinutes(article.content);
     document.title = article.title + ' — научИИсь';
     setMeta('meta[name="description"]', 'content', desc);
     setMeta('meta[name="keywords"]', 'content', article.title + ', ' + article.category + ', вайбкодинг, AI-инструменты, нейросети');
-    setMeta('link#canonicalLink', 'href', assetBase);
+    setMeta('link#canonicalLink', 'href', url);
+    setMeta('meta[property="og:type"]', 'content', 'article');
+    setMeta('meta[property="article:modified_time"]', 'content', '2026-10-26');
+    setMeta('meta[property="article:section"]', 'content', article.category);
+    setMeta('meta[property="article:tag"]', 'content', 'вайбкодинг, ' + article.category);
     setMeta('meta[property="og:title"]', 'content', article.title + ' — научИИсь');
     setMeta('meta[property="og:description"]', 'content', desc);
     setMeta('meta[property="og:url"]', 'content', url);
     setMeta('meta[property="og:image"]', 'content', assetBase + 'static/social/og.jpg');
+    setMeta('meta[property="og:image:alt"]', 'content', article.title + ' — научИИсь');
     setMeta('meta[name="twitter:title"]', 'content', article.title + ' — научИИсь');
     setMeta('meta[name="twitter:description"]', 'content', desc);
     setMeta('meta[name="twitter:image"]', 'content', assetBase + 'static/social/og.jpg');
+    setMeta('meta[name="twitter:image:alt"]', 'content', article.title + ' — научИИсь');
     var faq = extractFAQ(doc);
     var graph = [
-      { "@type": "Article", "headline": article.title, "description": desc, "articleSection": article.category, "inLanguage": "ru", "url": url, "mainEntityOfPage": url, "dateModified": "2026-10-26", "wordCount": wordCount(article.content), "timeRequired": "PT" + minutes + "M", "isAccessibleForFree": true, "keywords": article.category + ", вайбкодинг, AI-инструменты", "author": { "@type": "Organization", "name": "научИИсь" }, "publisher": { "@type": "Organization", "name": "научИИсь", "logo": { "@type": "ImageObject", "url": assetBase + "static/icons/icon-512.png", "width": 512, "height": 512 } }, "image": assetBase + "static/social/og.jpg" },
+      { "@type": "Article", "headline": article.title, "description": desc, "articleSection": article.category, "inLanguage": "ru", "url": url, "mainEntityOfPage": { "@type": "WebPage", "@id": url }, "dateModified": "2026-10-26", "wordCount": wordCount(article.content), "timeRequired": "PT" + minutes + "M", "isAccessibleForFree": true, "isPartOf": { "@id": assetBase + "#website" }, "keywords": article.category + ", вайбкодинг, AI-инструменты", "author": { "@type": "Organization", "name": "научИИсь" }, "publisher": { "@type": "Organization", "name": "научИИсь", "logo": { "@type": "ImageObject", "url": assetBase + "static/icons/icon-512.png", "width": 512, "height": 512 } }, "image": { "@type": "ImageObject", "url": assetBase + "static/social/og.jpg", "width": 1170, "height": 699 } },
       { "@type": "BreadcrumbList", "itemListElement": [ { "@type": "ListItem", "position": 1, "name": "Главная", "item": assetBase }, { "@type": "ListItem", "position": 2, "name": article.category }, { "@type": "ListItem", "position": 3, "name": article.title, "item": url } ] }
     ];
     if (faq.length) graph.push({ "@type": "FAQPage", "mainEntity": faq.map(function(f){ return { "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } }; }) });
@@ -1293,9 +1335,9 @@
     el.textContent = JSON.stringify({ "@context": "https://schema.org", "@graph": graph });
   }
   function injectCollectionLd() {
-    var base = location.href.split('#')[0];
+    var base = location.href.split('#')[0].split('?')[0];
     var items = [];
-    for (var i = 0; i < ARTICLES.length; i++) items.push({ "@type": "ListItem", "position": i + 1, "name": ARTICLES[i].title, "url": base + '#' + ARTICLES[i].id });
+    for (var i = 0; i < ARTICLES.length; i++) items.push({ "@type": "ListItem", "position": i + 1, "name": ARTICLES[i].title, "url": base + '?article=' + encodeURIComponent(ARTICLES[i].id) });
     var el = document.getElementById('collectionLd');
     if (!el) { el = document.createElement('script'); el.type = 'application/ld+json'; el.id = 'collectionLd'; document.head.appendChild(el); }
     el.textContent = JSON.stringify({ "@context": "https://schema.org", "@type": "ItemList", "name": "Статьи научИИсь", "numberOfItems": items.length, "itemListElement": items });
@@ -1307,7 +1349,8 @@
     var savedRating = ratings[article.id];
     var doc = parseDoc(article.content);
     var minutes = readMinutes(article.content);
-    var shareUrl = location.href.split('#')[0] + '#' + article.id;
+    var shareBase = location.href.split('#')[0].split('?')[0];
+    var shareUrl = shareBase + '?article=' + encodeURIComponent(article.id);
     var shareText = article.title + ' — научИИсь';
     var su = encodeURIComponent(shareUrl);
     var st = encodeURIComponent(shareText);
@@ -1412,7 +1455,7 @@
   function selectArticle(id) {
     var article = findArticle(id); if (!article) return;
     currentId = id;
-    try { if (history.replaceState) history.replaceState(null, '', '#' + id); } catch (e) {}
+    try { if (history.replaceState) history.replaceState(null, '', '?article=' + encodeURIComponent(id)); } catch (e) {}
     renderArticle(article); contentEl.scrollTop = 0; updateReadingProgress(); updateToTop();
     var items = tocEl.querySelectorAll('.toc-item');
     for (var i = 0; i < items.length; i++) {
@@ -1825,6 +1868,9 @@
       var hashId = decodeURIComponent((location.hash || '').replace(/^#/, ''));
       if (hashId) initial = findArticle(hashId);
     } catch (e) {}
+    if (!initial) {
+      try { var qid = new URLSearchParams(location.search).get('article'); if (qid) initial = findArticle(qid); } catch (e) {}
+    }
     if (!initial) {
       for (var i = 0; i < ARTICLES.length; i++) { if (!readSet[ARTICLES[i].id]) { initial = ARTICLES[i]; break; } }
     }
