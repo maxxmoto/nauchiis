@@ -205,11 +205,11 @@ app.add_middleware(GZipMiddleware, minimum_size=1024)
 
 CSP = (
     "default-src 'self'; "
-    "script-src 'self' 'unsafe-inline'; "
+    "script-src 'self' 'unsafe-inline' https://mc.yandex.ru; "
     "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; "
     "font-src 'self' https://fonts.gstatic.com; "
-    "img-src 'self' data:; "
-    "connect-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; "
+    "img-src 'self' data: https://mc.yandex.ru; "
+    "connect-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com https://mc.yandex.ru; "
     "frame-src https://vkvideo.ru https://login.vk.ru https://id.vk.com https://www.youtube.com https://youtube.com https://www.youtube-nocookie.com; "
     "manifest-src 'self'; object-src 'none'; base-uri 'self'; "
     "form-action 'self'; frame-ancestors 'self'"
