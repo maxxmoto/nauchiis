@@ -11,7 +11,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY server.py .
 RUN mkdir -p static
 
-COPY index.html articles-data.js manifest.json robots.txt sitemap.xml ai-disclaimer.html ./static/
+COPY index.html articles-data.js manifest.json robots.txt sitemap.xml terms.html ai-disclaimer.html ./static/
 COPY static ./static/static
 
 EXPOSE 80

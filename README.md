@@ -10,6 +10,7 @@
 ## Что внутри
 
 - `index.html`, `articles-data.js` — статический сайт
+- `terms.html` — пользовательское соглашение
 - `ai-disclaimer.html` — дисклеймер об AI
 - `server.py` — FastAPI: статика + `/api/marcus` для GigaChat
 - `requirements.txt` — зависимости бэкенда
