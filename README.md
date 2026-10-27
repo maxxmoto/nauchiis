@@ -47,7 +47,7 @@ uvicorn server:app --host 0.0.0.0 --port 8000
 Дополнительно:
 
 - `GIGACHAT_SCOPE` — `GIGACHAT_API_PERS` (по умолчанию) или `GIGACHAT_API_CORP`;
-- `GIGACHAT_MODEL` — `GigaChat`, `GigaChat-Pro`, `GigaChat-Max` (если доступно);
+- `GIGACHAT_MODEL` — `GigaChat-2` по умолчанию; доступные модели смотрите в `/api/health?probe=1`;
 - `GIGACHAT_VERIFY_SSL` — `false` по умолчанию. Если в контейнер добавлен российский корневой сертификат, поставьте `true`.
 
 **Ключ никогда не попадает во фронтенд и репозиторий.** В Amvera добавьте его в переменные/секреты приложения.

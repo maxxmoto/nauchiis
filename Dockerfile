@@ -12,7 +12,7 @@ COPY server.py .
 RUN mkdir -p static
 
 COPY index.html articles-data.js manifest.json robots.txt sitemap.xml ./static/
-COPY logo.webp og.png claude-logo.webp claudecode-color.webp codex-color.webp cursor.webp x5-tech.webp alfa-bank.webp sberbank-logo.svg sbermarketing.webp victory-group.webp prodamus.svg Selecty.webp s7.svg favicon.svg favicon.ico favicon-16.png favicon-32.png favicon-48.png apple-touch-icon.png icon-192.png icon-512.png ./static/
+COPY logo.webp og.png og.webp anrew-carp.webp opencode-logo.webp claude-logo.webp claudecode-color.webp codex-color.webp cursor.webp x5-tech.webp alfa-bank.webp sberbank-logo.svg sbermarketing.webp victory-group.webp prodamus.svg Selecty.webp s7.svg favicon.svg favicon.ico favicon-16.png favicon-32.png favicon-48.png apple-touch-icon.png icon-192.png icon-512.png ./static/
 COPY cat-warning.webp cat-relax.webp cat-ai.webp footer.webp meme-stack.webp ./static/
 
 EXPOSE 80

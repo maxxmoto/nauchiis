@@ -132,6 +132,18 @@
   [data-theme="dark"] .course-vs-card.bad .course-vs-title{color:#ffb3b3;}
   .course-meme{display:block;width:100%;max-width:720px;height:auto;margin:20px auto;border-radius:14px;border:1px solid var(--border);box-shadow:0 10px 26px rgba(0,0,0,.10);}
   [data-theme="dark"] .course-meme{box-shadow:0 12px 30px rgba(0,0,0,.4);}
+  .quote-photo{display:grid;grid-template-columns:1fr 180px;gap:20px;align-items:center;margin:24px 0;padding:20px 22px;border-radius:16px;background:linear-gradient(135deg,#f5f9ff,#fff);border:1px solid #dbeafe;}
+  .quote-photo blockquote{font-size:clamp(20px,2.8vw,28px);line-height:1.35;font-weight:800;color:#0b3b7a;letter-spacing:-.4px;margin:0;}
+  .quote-photo figure{margin:0;text-align:center;}
+  .prose .quote-photo img{display:block;width:180px;height:auto;border-radius:14px;border:1px solid var(--border);}
+  .quote-photo figcaption{font-size:10px;text-transform:uppercase;letter-spacing:.7px;color:var(--text-soft);margin-top:6px;}
+  [data-theme="dark"] .quote-photo{background:linear-gradient(135deg,#0f1d33,#111827);border-color:#1e3a5f;}
+  [data-theme="dark"] .quote-photo blockquote{color:#cfe2ff;}
+  [data-theme="dark"] .quote-photo figcaption{color:#7b8799;}
+  .prose img.tool-hero-logo{display:block;width:auto;height:auto;max-width:260px;margin:18px 0;border-radius:10px;}
+  .course-og{width:100%;max-width:640px;margin:0 auto 24px;}
+  .prose .course-og img{display:block;width:100%;height:auto;border-radius:14px;border:1px solid var(--border);}
+  @media(max-width:640px){.quote-photo{grid-template-columns:1fr;gap:14px;padding:16px;}.quote-photo figure{order:2;}.quote-photo blockquote{order:1;}.prose .quote-photo img{width:150px;margin:0 auto;}.prose img.tool-hero-logo{max-width:220px;}}
   @media(max-width:640px){.course-vs{grid-template-columns:1fr;gap:12px;}.course-vs-title{font-size:38px;}.course-vs-card.good .course-vs-title{font-size:30px;}}
   .prose img.tool-logo{display:inline-block;height:30px;width:auto;max-width:none;vertical-align:middle;margin-right:8px;border-radius:0;}
   .prose img.tool-logo-wide{height:26px;margin-right:0;}
@@ -1285,6 +1297,9 @@
     html += '<button class="share-btn share-copy" type="button" aria-label="Скопировать ссылку" title="Скопировать ссылку">' + svg('link', 16) + '<span class="share-text">Скопировать</span></button>';
     html += '</div><div class="share-feedback" id="shareFeedback" aria-live="polite"></div></div>';
     html += buildTLDR(article, doc, minutes);
+    if (article.id === 'course-guide') {
+      html += '<div class="course-og"><img src="og.webp" alt="научИИсь — практическое AI-образование" loading="lazy" decoding="async"></div>';
+    }
     if (article.id === 'intro') {
       html += '<div class="video-embed"><iframe src="https://vkvideo.ru/video_ext.php?oid=-138398280&amp;id=456241166&amp;hash=9e51925893e3c9e6" width="640" height="360" frameborder="0" allowfullscreen="1" style="background-color:#000" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Видео: Вайбкодинг — полное введение"></iframe></div>';
     }
