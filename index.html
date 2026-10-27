@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>научИИсь — практический гид по вайбкодингу и AI-инструментам</title>
-<meta name="description" content="Практический гид по вайбкодингу: 59 статей об AI-инструментах, разработке, безопасности, продажах, праве и запуске проектов. Кейсы, чек-листы, калькуляторы и проверка знаний.">
+<meta name="description" content="Практический гид по вайбкодингу: 60 статей об AI-инструментах, разработке, безопасности, продажах, праве и запуске проектов. Кейсы, чек-листы, калькуляторы и проверка знаний.">
 <meta name="keywords" content="вайбкодинг, vibe coding, AI-инструменты, AI-агенты, Agentic Engineering, OpenCode, Cursor, Claude Code, Codex, субагенты, MCP, hooks, context engineering, RAG, промпт-инжиниринг, разработка с ИИ, нейросети, автоматизация, n8n, Telegram-боты, 152-ФЗ, SEO, Яндекс.Метрика, Яндекс.Директ, фриланс, продажи, ценообразование">
 <meta name="author" content="научИИсь">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -25,7 +25,7 @@
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <link rel="manifest" href="manifest.json">
-<link rel="preload" as="image" href="logo.png" fetchpriority="high">
+<link rel="preload" as="image" href="logo.webp" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
@@ -33,7 +33,7 @@
 <meta property="og:site_name" content="научИИсь">
 <meta property="og:locale" content="ru_RU">
 <meta property="og:title" content="научИИсь — практический гид по вайбкодингу и AI-инструментам">
-<meta property="og:description" content="59 статей об AI-инструментах, разработке, безопасности, продажах, праве и запуске проектов. Кейсы, чек-листы, калькуляторы и проверка знаний.">
+<meta property="og:description" content="60 статей об AI-инструментах, разработке, безопасности, продажах, праве и запуске проектов. Кейсы, чек-листы, калькуляторы и проверка знаний.">
 <meta property="og:url" content="https://xn--80aqaqb1b2a.xn--p1ai/">
 <meta property="og:image" content="https://xn--80aqaqb1b2a.xn--p1ai/og.png">
 <meta property="og:image:type" content="image/png">
@@ -44,7 +44,7 @@
 <link rel="alternate" hreflang="x-default" href="https://xn--80aqaqb1b2a.xn--p1ai/">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="научИИсь — практический гид по вайбкодингу и AI-инструментам">
-<meta name="twitter:description" content="59 статей об AI-инструментах, разработке, безопасности, продажах, праве и запуске проектов.">
+<meta name="twitter:description" content="60 статей об AI-инструментах, разработке, безопасности, продажах, праве и запуске проектов.">
 <meta name="twitter:image" content="https://xn--80aqaqb1b2a.xn--p1ai/og.png">
 <meta name="twitter:image:alt" content="научИИсь — практический гид по вайбкодингу">
 <script type="application/ld+json">
@@ -70,7 +70,7 @@
       "@type": "CollectionPage",
       "@id": "./#collection",
       "name": "Практический гид по вайбкодингу",
-      "description": "59 статей об AI-инструментах, разработке, безопасности, продажах, праве и запуске проектов.",
+      "description": "60 статей об AI-инструментах, разработке, безопасности, продажах, праве и запуске проектов.",
       "inLanguage": "ru",
       "isPartOf": { "@id": "./#website" }
     }
@@ -114,6 +114,25 @@
   .prose li{margin:0 0 8px;}
   .prose li::marker{color:var(--accent);font-weight:700;}
   .prose strong{color:var(--text);font-weight:600;}
+  .course-vs{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0;}
+  .course-vs-card{position:relative;padding:26px 18px 22px;border-radius:16px;border:1px solid var(--border);background:linear-gradient(160deg,#fff,#f7f9fc);text-align:center;overflow:hidden;}
+  .course-vs-card.bad{background:linear-gradient(160deg,#fff5f5,#fff);border-color:#fecaca;}
+  .course-vs-card.good{background:linear-gradient(160deg,#f2fff7,#fff);border-color:#bbf7d0;}
+  .course-vs-icon{display:flex;justify-content:center;margin-bottom:10px;}
+  .course-vs-icon svg{width:46px;height:46px;}
+  .course-vs-title{font-size:clamp(28px,4.2vw,44px);font-weight:900;letter-spacing:-1.5px;line-height:1;color:#111;}
+  .course-vs-card.bad .course-vs-title{color:#991b1b;text-decoration:line-through;text-decoration-thickness:3px;}
+  .course-vs-card.good .course-vs-title{color:#14532d;font-size:clamp(24px,3.2vw,36px);letter-spacing:-2px;white-space:nowrap;}
+  .course-vs-ai{color:var(--accent);}
+  .course-vs-sub{font-size:11px;color:var(--text-soft);margin-top:10px;line-height:1.45;}
+  [data-theme="dark"] .course-vs-card{background:#111827;border-color:#263247;}
+  [data-theme="dark"] .course-vs-card.bad{background:#241014;border-color:#5a1d24;}
+  [data-theme="dark"] .course-vs-card.good{background:#0f2319;border-color:#1f5135;}
+  [data-theme="dark"] .course-vs-card.good .course-vs-title{color:#c9f7d9;}
+  [data-theme="dark"] .course-vs-card.bad .course-vs-title{color:#ffb3b3;}
+  .course-meme{display:block;width:100%;max-width:720px;height:auto;margin:20px auto;border-radius:14px;border:1px solid var(--border);box-shadow:0 10px 26px rgba(0,0,0,.10);}
+  [data-theme="dark"] .course-meme{box-shadow:0 12px 30px rgba(0,0,0,.4);}
+  @media(max-width:640px){.course-vs{grid-template-columns:1fr;gap:12px;}.course-vs-title{font-size:38px;}.course-vs-card.good .course-vs-title{font-size:30px;}}
   .prose img.tool-logo{display:inline-block;height:30px;width:auto;max-width:none;vertical-align:middle;margin-right:8px;border-radius:0;}
   .prose img.tool-logo-wide{height:26px;margin-right:0;}
   .tool-section{overflow:hidden;}
@@ -608,7 +627,7 @@
 <noscript>
   <div style="max-width:740px;margin:80px auto;padding:0 20px;font-family:system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.6;color:#111;">
     <h1 style="font-size:32px;line-height:1.2;margin:0 0 16px;">научИИсь — практический гид по вайбкодингу</h1>
-    <p style="margin:0;">59 статей об AI-инструментах, разработке, безопасности, продажах, праве и запуске проектов. Кейсы, чек-листы и калькуляторы. Для интерактивного чтения включите JavaScript.</p>
+    <p style="margin:0;">60 статей об AI-инструментах, разработке, безопасности, продажах, праве и запуске проектов. Кейсы, чек-листы и калькуляторы. Для интерактивного чтения включите JavaScript.</p>
   </div>
 </noscript>
 
@@ -619,7 +638,7 @@
     <button class="menu-btn" id="menuBtn" aria-label="Меню" aria-expanded="false" aria-controls="sidebar">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
     </button>
-    <div class="brand"><img src="logo.png" alt="научИИсь" class="brand-logo" width="1774" height="887" decoding="async" loading="eager" fetchpriority="high"><span class="brand-sub">· гид</span></div>
+    <div class="brand"><img src="logo.webp" alt="научИИсь" class="brand-logo" width="400" height="200" decoding="async" loading="eager" fetchpriority="high"><span class="brand-sub">· гид</span></div>
     <div class="header-spacer"></div>
     <button class="theme-btn" id="themeBtn" aria-label="Переключить тему" title="Переключить тему">
       <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
@@ -650,7 +669,7 @@
       <button class="assistant-icon-btn" id="assistantClose" aria-label="Закрыть Маркуса" title="Закрыть"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
     </div>
     <div class="assistant-body" id="assistantBody">
-      <div class="assistant-msg bot">Привет! Я Маркус — помощник по этому гиду. Знаю все 59 статей и помогу найти нужное, объяснить термин или подсказать следующий шаг. Спросите что-нибудь.</div>
+      <div class="assistant-msg bot">Привет! Я Маркус — помощник по этому гиду. Знаю все 60 статей и помогу найти нужное, объяснить термин или подсказать следующий шаг. Спросите что-нибудь.</div>
       <div class="assistant-chips" id="assistantChips">
         <button class="assistant-chip" data-q="С чего начать?">С чего начать?</button>
         <button class="assistant-chip" data-q="Что такое вайбкодинг?">Что такое вайбкодинг?</button>
@@ -798,6 +817,7 @@
     "agent-workflow": "Агент сказал «все тесты проходят», а я поверил. На CI выяснилось, что он запустил один тест из двадцати. Теперь требую вывод и не мержу без зелёного pipeline.",
     "rag-basics": "Я попробовал отвечать на вопросы по документации, загрузив всё в контекст. Стало дорого и неточно. После разбиения на чанки и поиска по разделам ответы стали короче и с ссылками.",
 
+    "course-guide": "Я собрал этот гид, потому что сам тонул в разрозненных советах. Когда статей стало 60, я понял: без навигации это просто свалка. Так появились маршруты, квизы, видео и Маркус."
   };
   var CURATED_QUIZ = {
     pricing: [
@@ -1500,10 +1520,10 @@
   var ASSIST_TRIGGERS = [
     { re: /(хуй|хуя|хую|хуе|хуё|хуи)/, text: 'ХХХАХААХАХ СМЕШНО', sources: [] , noAI: true },
     { re: /^(привет|здравств|хай|добрый день|доброе утро|добрый вечер|ку)/, text: 'Привет! Я Маркус — помощник по этому гиду. Могу найти статью по теме, объяснить термин или подсказать, с чего начать. Что вас интересует?', sources: [] , noAI: true },
-    { re: /(ты кто|кто ты|кто вы|вы кто|кто такой маркус|кто такой ты|как тебя зовут|представься|расскажи о себе|что ты умеешь|что ты за|ты бот|что за бот|кто тебя создал|кто тебя сделал|маркус)/, text: 'Я Маркус — помощник по курсу научИИсь. Работаю локально: ищу по всем 59 статьям, показываю источники и помогаю выбрать следующий шаг. Умею отвечать про вайбкодинг, инструменты, MCP, субагентов, контекст, безопасность, продажи, право и бизнес.', sources: ['intro', 'ai-modes', 'tools-mcp'] , noAI: true },
+    { re: /(ты кто|кто ты|кто вы|вы кто|кто такой маркус|кто такой ты|как тебя зовут|представься|расскажи о себе|что ты умеешь|что ты за|ты бот|что за бот|кто тебя создал|кто тебя сделал|маркус)/, text: 'Я Маркус — помощник по курсу научИИсь. Работаю локально: ищу по всем 60 статьям, показываю источники и помогаю выбрать следующий шаг. Умею отвечать про вайбкодинг, инструменты, MCP, субагентов, контекст, безопасность, продажи, право и бизнес.', sources: ['intro', 'ai-modes', 'tools-mcp'] , noAI: true },
     { re: /(спасибо|благодар)/, text: 'Пожалуйста! Если нужно, могу подобрать статьи по следующей теме или собрать короткий план чтения.', sources: [] , noAI: true },
     { re: /(пока|до свидания|до встречи)/, text: 'До связи! Возвращайтесь, когда захочется разобраться в следующей теме.', sources: [] , noAI: true },
-    { re: /(сколько).*(стат|материал)/, text: 'На сайте 59 статей в 9 категориях: Основы, Карьера, Инструменты, Agentic Engineering, Продажи, Право, Клиенты, Бизнес и Психология.', sources: ['intro', 'ai-modes'] , noAI: true },
+    { re: /(сколько).*(стат|материал)/, text: 'На сайте 60 статей в 9 категориях: Основы, Карьера, Инструменты, Agentic Engineering, Продажи, Право, Клиенты, Бизнес и Психология.', sources: ['intro', 'ai-modes'] , noAI: true },
     { re: /(как пользоваться|навигац|как читать|где читать|как открыть)/, text: 'Всё просто: слева — меню категорий, в начале статьи — TL;DR и «Что внутри», в конце — квиз и «Что делать дальше». Прогресс сохраняется, а кнопка «Поделиться» даёт ссылку на конкретную статью. Тему можно переключить в шапке.', sources: ['intro', 'ai-modes'] , noAI: true },
     { re: /(категор)/, text: 'Девять категорий: Основы, Карьера, Инструменты, Agentic Engineering, Продажи, Право, Клиенты, Бизнес и Психология. Скажите тему — подберу статьи.', sources: ['intro', 'ai-modes'] , noAI: true },
     { re: /(с чего начать|как начать|нович|план чтения|роадмап|первый шаг)/, text: 'Начните с «Вайбкодинга: полное введение», затем «6 режимов работы с AI». Дальше — «Как работает AI-агент» и «Промпты, Rules и Skills». Если цель — деньги, добавьте «Работодатели России» и «Ценообразование».', sources: ['intro', 'ai-modes', 'agent-loop', 'prompt-rules-skills', 'employers', 'pricing'] , noAI: true },
@@ -1537,7 +1557,7 @@
     { re: /(поделит|ссылк|share)/, text: 'Кнопка «Поделиться» находится под заголовком статьи. Ссылка ведёт на конкретную статью, а на мобильном открывается системное меню.', sources: [] , noAI: true },
     { re: /(квиз|проверь себя|тест|вопросы в конце)/, text: 'В конце каждой статьи есть «Проверь себя»: 2–3 вопроса, ответы и счётчик «Знал / Забыл». Это активное вспоминание — работает лучше пассивного чтения.', sources: [] , noAI: true },
     { re: /(прогресс|прочитан|сколько осталось)/, text: 'Прогресс виден в сайдбаре и в шапке. Полоска под шапкой показывает, сколько осталось до конца статьи, а прочитанные статьи отмечаются галочкой.', sources: [] , noAI: true },
-    { re: /(как найти|поиск|найти статью|где статья)/, text: 'Можно открыть категорию в боковом меню, спросить меня или использовать «Что внутри» в начале статьи. Я ищу по всем 59 материалам и даю ссылки на источники.', sources: ['intro', 'ai-modes'] , noAI: true }
+    { re: /(как найти|поиск|найти статью|где статья)/, text: 'Можно открыть категорию в боковом меню, спросить меня или использовать «Что внутри» в начале статьи. Я ищу по всем 60 материалам и даю ссылки на источники.', sources: ['intro', 'ai-modes'] , noAI: true }
   ];
   function assistIntent(q) {
     var n = assistNormalize(q);
