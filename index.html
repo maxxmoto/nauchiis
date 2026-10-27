@@ -285,9 +285,11 @@
   .site-footer{position:relative;display:none;width:100%;padding:0;margin:0;background:transparent;}
   .site-footer.ready{display:block;}
   .site-footer img{width:100%;height:auto;display:block;}
-  .footer-disclaimer{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);display:inline-flex;align-items:center;gap:6px;padding:8px 14px;background:#fff;color:#111;border:1px solid rgba(0,0,0,.08);border-radius:10px;font-size:12px;font-weight:700;text-decoration:none;white-space:nowrap;box-shadow:0 8px 24px rgba(0,0,0,.28);transition:background .15s,color .15s,transform .15s;}
-  .footer-disclaimer:hover{background:#f5f8ff;color:var(--accent);text-decoration:none;transform:translateX(-50%) translateY(-1px);}
-  @media(max-width:640px){.footer-disclaimer{bottom:10px;padding:6px 10px;font-size:11px;}}
+  .footer-legal{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px 10px;max-width:calc(100% - 32px);padding:8px 14px;background:#fff;color:#111;border:1px solid rgba(0,0,0,.08);border-radius:10px;font-size:12px;font-weight:700;line-height:1.35;text-align:center;box-shadow:0 8px 24px rgba(0,0,0,.28);}
+  .footer-legal a{color:#111;text-decoration:none;white-space:nowrap;}
+  .footer-legal a:hover{color:var(--accent);text-decoration:underline;}
+  .footer-legal span{color:#9aa3ad;}
+  @media(max-width:640px){.footer-legal{bottom:10px;padding:6px 10px;font-size:10.5px;gap:4px 8px;max-width:calc(100% - 20px);}}
   .sidebar{grid-area:sidebar;overflow-y:auto;border-left:1px solid var(--border);background:var(--bg-sidebar);}
   .sidebar::-webkit-scrollbar{width:5px;}
   .sidebar::-webkit-scrollbar-thumb{background:#d9d9d9;border-radius:3px;}
@@ -721,7 +723,7 @@
   </header>
   <div class="read-progress" id="readProgress"><div class="read-progress-fill" id="readProgressFill"></div></div>
   <div class="read-remaining" id="readRemaining"></div>
-  <main class="content" id="content"><article class="article" id="article"></article><footer class="site-footer" id="siteFooter"><img src="static/images/footer.webp" alt="научИИсь — больше чем просто код" width="1400" height="427" loading="lazy" decoding="async"><a class="footer-disclaimer" href="ai-disclaimer.html">Дисклеймер об AI</a></footer></main>
+  <main class="content" id="content"><article class="article" id="article"></article><footer class="site-footer" id="siteFooter"><img src="static/images/footer.webp" alt="научИИсь — больше чем просто код" width="1400" height="427" loading="lazy" decoding="async"><div class="footer-legal"><a href="terms.html">Пользовательское соглашение</a><span aria-hidden="true">·</span><a href="ai-disclaimer.html">Дисклеймер об AI</a></div></footer></main>
   <aside class="sidebar" id="sidebar">
     <div class="progress-card"><div class="progress-label">Прогресс</div><div class="progress-count"><strong id="progressRead">0</strong> из <strong id="progressTotal">—</strong> статей</div><div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div></div>
     <nav class="toc" id="toc" aria-label="Содержание"></nav>
