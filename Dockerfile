@@ -1,4 +1,4 @@
-# rebuild: source2-72d
+# rebuild: youtube-claude
 FROM python:3.12-slim
 
 ENV PYTHONDONTWRITEBYTECODE=1 \
