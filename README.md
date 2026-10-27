@@ -4,45 +4,63 @@
 
 - **Домен:** https://научиим.рф/
 - **Punycode:** https://xn--80aqaqb1b2a.xn--p1ai/
-- **Preview на GitHub Pages:** https://maxxmoto.github.io/nauchiis/
+- **Репозиторий:** https://github.com/maxxmoto/nauchiis
+- **Preview:** https://maxxmoto.github.io/nauchiis/
+
+## Что внутри
+
+- `index.html`, `articles-data.js` — статический сайт
+- `server.py` — FastAPI: статика + `/api/marcus` для GigaChat
+- `requirements.txt` — зависимости бэкенда
+- `og.png`, `*.webp`, `logo.png`, `favicon*` — ассеты
+- `Dockerfile`, `amvera.yaml` — деплой на Amvera
+- `.env.example` — пример переменных для локального запуска
 
 ## Локальный запуск
+
+Только статика (Маркус работает в локальном режиме):
 
 ```bash
 python -m http.server 8000
 ```
 
-Откройте http://localhost:8000
+Полный сервер с GigaChat:
 
-## Docker
-
-```bash
-docker build -t nauchiis .
-docker run --rm -p 8080:80 nauchiis
+```powershell
+pip install -r requirements.txt
+$env:STATIC_DIR = "."
+$env:GIGACHAT_AUTH_KEY = "..."   # ключ авторизации GigaChat
+uvicorn server:app --host 0.0.0.0 --port 8000
 ```
 
-Откройте http://localhost:8080
+Откройте http://localhost:8000
+
+Без ключа `/api/marcus` вернёт 503, а фронтенд автоматически откатится к локальному поиску по статьям.
+
+## GigaChat: переменные
+
+Задайте один из вариантов:
+
+- `GIGACHAT_AUTH_KEY` — готовый Authorization key (base64 `client_id:client_secret`);
+- или `GIGACHAT_CLIENT_ID` + `GIGACHAT_CLIENT_SECRET`.
+
+Дополнительно:
+
+- `GIGACHAT_SCOPE` — `GIGACHAT_API_PERS` (по умолчанию) или `GIGACHAT_API_CORP`;
+- `GIGACHAT_MODEL` — `GigaChat`, `GigaChat-Pro`, `GigaChat-Max` (если доступно);
+- `GIGACHAT_VERIFY_SSL` — `false` по умолчанию. Если в контейнер добавлен российский корневой сертификат, поставьте `true`.
+
+**Ключ никогда не попадает во фронтенд и репозиторий.** В Amvera добавьте его в переменные/секреты приложения.
 
 ## Деплой на Amvera
 
-Проект уже подготовлен: `Dockerfile`, `nginx.conf`, `amvera.yaml`, `.dockerignore`.
+1. Создайте приложение типа **Docker**.
+2. Подключите GitHub-репозиторий `maxxmoto/nauchiis`, ветка `main`.
+3. Amvera использует `amvera.yaml` и `Dockerfile`, приложение слушает порт **80**.
+4. В **Переменные/Секреты** добавьте `GIGACHAT_AUTH_KEY` (или client id/secret).
+5. **Домены → Добавить доменное имя → HTTPS → Свой домен**.
+6. Введите `научиим.рф` в нижнем регистре (если кириллица не принимается — `xn--80aqaqb1b2a.xn--p1ai`).
+7. У регистратора добавьте **A** для `@` и **TXT** для `_amvera` со значениями из Amvera. Дождитесь DNS и нажмите «Применить».
+8. SSL-сертификат Amvera выпустит автоматически.
 
-1. Создайте приложение типа **Docker** в Amvera.
-2. Подключите GitHub-репозиторий `maxxmoto/nauchiis` или запушьте код в Amvera Git.
-3. Сборка идёт по `Dockerfile` / `amvera.yaml`, приложение слушает порт **80**.
-4. Откройте **Домены → Добавить доменное имя → HTTPS → Свой домен**.
-5. Введите домен в нижнем регистре: `научиим.рф` (если поле не принимает кириллицу — `xn--80aqaqb1b2a.xn--p1ai`).
-6. Amvera покажет записи для DNS. У регистратора добавьте:
-   - **A** для `@` на IP из Amvera;
-   - **TXT** для `_amvera` со значением из Amvera.
-7. Дождитесь распространения DNS (до 24 часов) и нажмите «Применить». SSL-сертификат Amvera выпустит автоматически.
-
-После переезда GitHub Pages можно оставить как превью или отключить — canonical и OG-теги уже указывают на `научиим.рф`.
-
-## Структура
-
-- `index.html` — оболочка, стили и интерфейс
-- `articles-data.js` — база статей
-- `*.webp`, `logo.png`, `favicon*` — ассеты
-- `manifest.json`, `robots.txt`, `sitemap.xml` — PWA и SEO
-- `Dockerfile`, `nginx.conf`, `amvera.yaml` — деплой на Amvera
+После переезда GitHub Pages можно оставить как превью или отключить — canonical и OG-теги указывают на `научиим.рф`.
