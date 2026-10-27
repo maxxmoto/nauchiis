@@ -205,8 +205,22 @@ async def healthz():
 
 
 @app.get("/api/health")
-async def api_health():
-    return {"ok": True, "gigachat_configured": bool(auth_key())}
+async def api_health(request: Request, probe: bool = False):
+    result = {
+        "ok": True,
+        "gigachat_configured": bool(auth_key()),
+        "scope": GIGACHAT_SCOPE,
+        "model": GIGACHAT_MODEL,
+        "verify_ssl": VERIFY_SSL,
+    }
+    if probe and auth_key():
+        try:
+            await get_token(request.app.state.client)
+            result["gigachat_token"] = True
+        except Exception as exc:
+            result["gigachat_token"] = False
+            result["gigachat_error"] = type(exc).__name__
+    return result
 
 
 @app.post("/api/marcus")
