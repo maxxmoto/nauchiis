@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>научИИсь — практический гид по вайбкодингу и AI-инструментам</title>
-<meta name="description" content="Практический гид по вайбкодингу: 72 статьи об AI-инструментах, разработке, безопасности, продажах, праве и запуске проектов. Кейсы, чек-листы, калькуляторы и проверка знаний.">
+<meta name="description" content="Практический гид по вайбкодингу: 73 статьи об AI-инструментах, разработке, безопасности, продажах, праве и запуске проектов. Кейсы, чек-листы, калькуляторы и проверка знаний.">
 <meta name="keywords" content="вайбкодинг, vibe coding, AI-инструменты, AI-агенты, Agentic Engineering, OpenCode, Cursor, Claude Code, Codex, субагенты, MCP, hooks, context engineering, RAG, промпт-инжиниринг, разработка с ИИ, нейросети, автоматизация, n8n, Telegram-боты, 152-ФЗ, SEO, Яндекс.Метрика, Яндекс.Директ, фриланс, продажи, ценообразование">
 <meta name="author" content="научИИсь">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -35,7 +35,7 @@
 <meta property="og:site_name" content="научИИсь">
 <meta property="og:locale" content="ru_RU">
 <meta property="og:title" content="научИИсь — практический гид по вайбкодингу и AI-инструментам">
-<meta property="og:description" content="72 статьи об AI-инструментах, разработке, безопасности, продажах, праве и запуске проектов. Кейсы, чек-листы, калькуляторы и проверка знаний.">
+<meta property="og:description" content="73 статьи об AI-инструментах, разработке, безопасности, продажах, праве и запуске проектов. Кейсы, чек-листы, калькуляторы и проверка знаний.">
 <meta property="og:url" content="https://xn--80aqaqb1b2a.xn--p1ai/">
 <meta property="og:image" content="https://xn--80aqaqb1b2a.xn--p1ai/static/social/og.jpg">
 <meta property="og:image:type" content="image/jpeg">
@@ -49,7 +49,7 @@
 <link rel="alternate" hreflang="x-default" href="https://xn--80aqaqb1b2a.xn--p1ai/">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="научИИсь — практический гид по вайбкодингу и AI-инструментам">
-<meta name="twitter:description" content="72 статьи об AI-инструментах, разработке, безопасности, продажах, праве и запуске проектов.">
+<meta name="twitter:description" content="73 статьи об AI-инструментах, разработке, безопасности, продажах, праве и запуске проектов.">
 <meta name="twitter:image" content="https://xn--80aqaqb1b2a.xn--p1ai/static/social/og.jpg">
 <meta name="twitter:image:width" content="1170">
 <meta name="twitter:image:height" content="699">
@@ -95,7 +95,7 @@
       "@id": "https://xn--80aqaqb1b2a.xn--p1ai/#collection",
       "url": "https://xn--80aqaqb1b2a.xn--p1ai/",
       "name": "Практический гид по вайбкодингу",
-      "description": "72 статьи об AI-инструментах, разработке, безопасности, продажах, праве и запуске проектов.",
+      "description": "73 статьи об AI-инструментах, разработке, безопасности, продажах, праве и запуске проектов.",
       "inLanguage": "ru",
       "isPartOf": {
         "@id": "https://xn--80aqaqb1b2a.xn--p1ai/#website"
@@ -698,6 +698,64 @@
     .assistant-msg{font-size:13px;}
     .assistant-source .src-title{font-size:12px;}
   }
+
+  /* ---------- final exam ---------- */
+  .exam{margin:30px 0 0;padding:22px;border:1px solid var(--border);border-radius:16px;background:var(--bg-sidebar);}
+  .exam-head{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;flex-wrap:wrap;margin-bottom:16px;}
+  .exam-kicker{font-size:11px;font-weight:800;letter-spacing:.9px;text-transform:uppercase;color:var(--accent);margin-bottom:6px;}
+  .exam-title{font-size:clamp(22px,4vw,30px);font-weight:800;letter-spacing:-.04em;line-height:1.1;color:var(--text);}
+  .exam-intro{font-size:13px;line-height:1.5;color:var(--text-mid);margin:8px 0 0;max-width:560px;}
+  .exam-best{font-size:12px;color:var(--text-soft);background:var(--bg);border:1px solid var(--border-soft);border-radius:9px;padding:7px 10px;white-space:nowrap;}
+  .exam-q{padding:16px 0;border-top:1px solid var(--border-soft);}
+  .exam-q:first-child{border-top:0;padding-top:0;}
+  .exam-q-title{display:flex;align-items:flex-start;gap:9px;font-size:14px;font-weight:650;line-height:1.5;color:var(--text);}
+  .exam-num{display:inline-flex;align-items:center;justify-content:center;flex:0 0 24px;width:24px;height:24px;border-radius:7px;background:#eef5ff;color:var(--accent);font-size:11px;font-weight:800;}
+  .exam-options{display:grid;gap:7px;margin:10px 0 0 33px;}
+  .exam-option{display:flex;align-items:flex-start;gap:9px;padding:9px 11px;border:1px solid var(--border);border-radius:9px;background:var(--bg);font-size:13px;line-height:1.45;color:var(--text-mid);cursor:pointer;transition:border-color .12s,background .12s;}
+  .exam-option:hover{border-color:#b8cdf0;background:#f7fbff;}
+  .exam-option input{margin:2px 0 0;accent-color:var(--accent);flex:none;}
+  .exam-option.correct{border-color:#86efac;background:#f0fdf4;color:#166534;font-weight:600;}
+  .exam-option.wrong{border-color:#fca5a5;background:#fff1f2;color:#9f1239;font-weight:600;}
+  .exam-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:20px;}
+  .exam-submit,.exam-reset{font-family:inherit;font-size:13px;font-weight:750;border-radius:10px;padding:10px 16px;cursor:pointer;transition:all .12s;}
+  .exam-submit{border:1px solid var(--accent);background:var(--accent);color:#fff;box-shadow:0 7px 18px rgba(0,102,255,.18);}
+  .exam-submit:hover{filter:brightness(.96);}
+  .exam-reset{border:1px solid var(--border);background:var(--bg);color:var(--text-mid);}
+  .exam-reset:hover{border-color:var(--accent);color:var(--accent);}
+  .exam-result{margin-top:16px;font-size:14px;line-height:1.55;}
+  .exam-result.pass{color:#166534;font-weight:700;}
+  .exam-result.fail{color:#9f1239;font-weight:700;}
+  .exam-result small{display:block;font-weight:500;color:var(--text-soft);margin-top:4px;font-size:12px;}
+  .exam-certificate{display:none;margin-top:20px;}
+  .certificate{max-width:760px;margin:0 auto;padding:18px;border-radius:18px;background:linear-gradient(145deg,#f8fbff,#fff 48%,#f3f7ff);border:1px solid #cfe2ff;box-shadow:0 18px 50px rgba(30,80,160,.12);}
+  .certificate-inner{padding:28px 30px;border:1px solid #dbeafe;border-radius:12px;text-align:center;background:radial-gradient(circle at 50% 0%,#fff 0%,#f8fbff 60%,#eef5ff 100%);}
+  .cert-top{display:flex;align-items:center;justify-content:space-between;gap:14px;text-align:left;margin-bottom:22px;}
+  .cert-logo{height:38px;width:auto;display:block;}
+  .cert-brand{font-weight:900;font-size:17px;letter-spacing:-.04em;color:#0b3b7a;line-height:1.1;}
+  .cert-brand-sub{font-size:10px;text-transform:uppercase;letter-spacing:.9px;color:#6b7c93;margin-top:3px;}
+  .cert-kicker{font-size:11px;font-weight:900;letter-spacing:.22em;color:#0066ff;margin-bottom:8px;}
+  .certificate h2{font-size:clamp(26px,5vw,42px);line-height:1.05;letter-spacing:-.05em;color:#0b1f3a;margin:0 0 8px;}
+  .cert-name{font-size:18px;font-weight:800;color:#0b3b7a;margin:0 0 4px;}
+  .cert-line{font-size:13px;color:#52647b;margin:0 0 16px;}
+  .cert-score{font-size:clamp(34px,8vw,56px);font-weight:900;letter-spacing:-.06em;color:#0066ff;line-height:1;}
+  .cert-score span{font-size:14px;font-weight:700;letter-spacing:0;color:#52647b;margin-left:8px;}
+  .cert-bottom{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid #dbeafe;margin-top:20px;padding-top:12px;font-size:11px;color:#6b7c93;}
+  .cert-note{font-size:9.5px;line-height:1.45;color:#8494a8;margin:12px 0 0;}
+  .cert-actions{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin-top:14px;}
+  .cert-actions button{font-family:inherit;font-size:12.5px;font-weight:750;border-radius:9px;padding:9px 14px;cursor:pointer;border:1px solid var(--border);background:var(--bg);color:var(--text-mid);}
+  .cert-actions button:first-child{background:var(--accent);border-color:var(--accent);color:#fff;}
+  .cert-actions button:hover{filter:brightness(.97);}
+  .cert-hint{text-align:center;font-size:10.5px;color:var(--text-soft);margin-top:6px;}
+  [data-theme="dark"] .exam{background:#0f1622;}
+  [data-theme="dark"] .exam-num{background:#10203a;}
+  [data-theme="dark"] .exam-option{background:#0f1622;}
+  [data-theme="dark"] .exam-option:hover{background:#111c2f;border-color:#2b4a77;}
+  [data-theme="dark"] .exam-option.correct{background:#0f2319;border-color:#1f5135;color:#c9f7d9;}
+  [data-theme="dark"] .exam-option.wrong{background:#241014;border-color:#5a1d24;color:#ffb3b3;}
+  [data-theme="dark"] .exam-best{background:#0f1622;}
+  @media(max-width:640px){
+    .exam{padding:15px;}.exam-options{margin-left:0;}.certificate{padding:10px;}.certificate-inner{padding:18px 14px;}.cert-top{flex-direction:column;align-items:flex-start;}.cert-bottom{flex-direction:column;gap:5px;}.cert-logo{height:30px;}
+  }
 </style>
 </head>
 <body>
@@ -705,7 +763,7 @@
 <noscript>
   <div style="max-width:740px;margin:80px auto;padding:0 20px;font-family:system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.6;color:#111;">
     <h1 style="font-size:32px;line-height:1.2;margin:0 0 16px;">научИИсь — практический гид по вайбкодингу</h1>
-    <p style="margin:0;">72 статьи об AI-инструментах, разработке, безопасности, продажах, праве и запуске проектов. Кейсы, чек-листы и калькуляторы. Для интерактивного чтения включите JavaScript.</p>
+    <p style="margin:0;">73 статьи об AI-инструментах, разработке, безопасности, продажах, праве и запуске проектов. Кейсы, чек-листы и калькуляторы. Для интерактивного чтения включите JavaScript.</p>
   </div>
 </noscript>
 
@@ -747,7 +805,7 @@
       <button class="assistant-icon-btn" id="assistantClose" aria-label="Закрыть Маркуса" title="Закрыть"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
     </div>
     <div class="assistant-body" id="assistantBody">
-      <div class="assistant-msg bot">Привет! Я Маркус — помощник по этому гиду. Знаю все 72 статьи и помогу найти нужное, объяснить термин или подсказать следующий шаг. Спросите что-нибудь.</div>
+      <div class="assistant-msg bot">Привет! Я Маркус — помощник по этому гиду. Знаю все 73 статьи и помогу найти нужное, объяснить термин или подсказать следующий шаг. Спросите что-нибудь.</div>
       <div class="assistant-chips" id="assistantChips">
         <button class="assistant-chip" data-q="С чего начать?">С чего начать?</button>
         <button class="assistant-chip" data-q="Что такое вайбкодинг?">Что такое вайбкодинг?</button>
@@ -895,7 +953,7 @@
     "agent-workflow": "Агент сказал «все тесты проходят», а я поверил. На CI выяснилось, что он запустил один тест из двадцати. Теперь требую вывод и не мержу без зелёного pipeline.",
     "rag-basics": "Я попробовал отвечать на вопросы по документации, загрузив всё в контекст. Стало дорого и неточно. После разбиения на чанки и поиска по разделам ответы стали короче и с ссылками.",
 
-    "course-guide": "Я собрал этот гид, потому что сам тонул в разрозненных советах. Когда статей стало 72, я понял: без навигации это просто свалка. Так появились маршруты, квизы, видео и Маркус."
+    "course-guide": "Я собрал этот гид, потому что сам тонул в разрозненных советах. Когда статей стало 73, я понял: без навигации это просто свалка. Так появились маршруты, квизы, видео и Маркус."
   };
   var CURATED_QUIZ = {
     pricing: [
@@ -1090,6 +1148,136 @@
     if (!Array.isArray(arr) || arr.length !== n) { arr = []; for (var i = 0; i < n; i++) arr.push(-1); }
     return arr;
   }
+
+  var EXAM_QUESTIONS = [
+    {q:"Что такое вайбкодинг?", o:["Написание кода без использования AI","Разработка через диалог с AI-агентом: человек ставит цель и проверяет результат","Только автодополнение в редакторе","Метод тестирования без тестов"], a:1},
+    {q:"Кто популяризировал термин «вайбкодинг»?", o:["Андрей Карпати","Сэм Альтман","Илья Суцкевер","Демис Хассабис"], a:0},
+    {q:"В каком порядке работает цикл AI-агента?", o:["Act → Think → Observe","Think → Act → Observe","Observe → Think → Act","Act → Observe → Think"], a:1},
+    {q:"Что такое контекстное окно?", o:["Размер экрана редактора","Количество установленных плагинов","Объём текста, который модель учитывает за один запрос","Лимит запросов в минуту"], a:2},
+    {q:"Что означает MCP?", o:["Multi Coding Platform","Model Context Protocol","Machine Code Processor","Managed Cloud Proxy"], a:1},
+    {q:"Что самое важное в описании tool?", o:["Когда и зачем его вызывать","Длина названия","Цвет иконки","Язык реализации"], a:0},
+    {q:"Зачем нужны субагенты?", o:["Чтобы увеличить контекст до бесконечности","Чтобы получить чистое контекстное окно и параллельность","Чтобы заменить тесты","Чтобы не писать код"], a:1},
+    {q:"Как работает RAG?", o:["Модель дообучается на всех данных сразу","Агент сначала ищет фрагменты, потом отвечает по ним","Модель генерирует ответ без источников","Ответ всегда берётся из кэша"], a:1},
+    {q:"Что такое prompt injection?", o:["Вредоносный текст, который заставляет агента нарушить правила","Способ ускорить промпт","Сжатие контекста","Тип токенизации"], a:0},
+    {q:"Что регулирует 152-ФЗ?", o:["Авторские права","Персональные данные","Рекламу","Налоги"], a:1},
+    {q:"Зачем нужен git commit?", o:["Зафиксировать состояние проекта","Удалить историю","Отправить письмо клиенту","Запустить сервер"], a:0},
+    {q:"Что делает Docker?", o:["Пишет код за вас","Упаковывает приложение в контейнер","Заменяет базу данных","Проверяет SEO"], a:1},
+    {q:"Где хранить API-ключи?", o:["В клиентском JavaScript","В репозитории на GitHub","На сервере в переменных окружения","В тексте статьи"], a:2},
+    {q:"Где создать Telegram-бота?", o:["В BotFather","В Notion","В Figma","В Google Sheets"], a:0},
+    {q:"Какая цель первого холодного контакта?", o:["Сразу продать дорогой пакет","Перевести на следующий шаг, а не продавать сразу","Отправить прайс без контекста","Спросить бюджет в первом сообщении"], a:1},
+    {q:"Что такое follow-up?", o:["Первый звонок","Удаление клиента из базы","Напоминание после контакта","Скидка на первый заказ"], a:2},
+    {q:"Как считается минимальная ставка?", o:["(Доход + расходы) / (1 − налог) × 1,2 / часы","Доход / количество клиентов","Расходы × 2","Средняя ставка на рынке"], a:0},
+    {q:"Что обязательно фиксировать в договоре на разработку?", o:["Только цену","Объём, сроки, оплату, правки и приёмку","Только название сайта","Только цвет дизайна"], a:1},
+    {q:"По каким критериям выбирать нишу?", o:["Красивый логотип","Количество подписчиков в соцсетях","Деньги, боль и доступ к ЛПР","Обещания «золотых гор»"], a:2},
+    {q:"Зачем нужен парсер 2ГИС?", o:["Искать компании без сайта","Автоматически писать код","Проверять Core Web Vitals","Создавать Telegram-ботов"], a:0},
+    {q:"Что входит в ведение сайта?", o:["Только дизайн","Поддержка, обновления и мелкие доработки","Только реклама","Только домен"], a:1},
+    {q:"Для чего используют n8n?", o:["Для автоматизации процессов","Для замены Git","Для вёрстки сайтов","Для налоговой отчётности"], a:0},
+    {q:"Для чего нужна 1С?", o:["Для автоматизации бизнеса","Для создания игр","Для дизайна лендингов","Для SEO-аудита"], a:0},
+    {q:"Что создаёт личный бренд?", o:["Только количество постов","Доверие и узнаваемость эксперта","Только рекламный бюджет","Только красивый логотип"], a:1},
+    {q:"Что такое синдром самозванца?", o:["Отсутствие навыков","Сомнение в компетентности при объективных результатах","Лень","Выгорание"], a:1},
+    {q:"Что такое выгорание?", o:["Истощение от длительного стресса","Краткая усталость после обеда","Страх публичных выступлений","Нежелание учиться"], a:0},
+    {q:"Прокрастинация — это…", o:["Лень","Откладывание из-за напряжения, а не отсутствия желания","Нехватка инструментов","Плохой интернет"], a:1},
+    {q:"Когда появился GitHub Copilot?", o:["2019","2020","2021","2023"], a:2},
+    {q:"Какая компания создала Claude?", o:["Anthropic","OpenAI","Google","Meta"], a:0},
+    {q:"Что означает TDD?", o:["Сначала код, потом тест","Сначала падающий тест, потом код","Тестирование только вручную","Только E2E-тесты"], a:1}
+  ];
+
+  function buildFinalExam() {
+    var h = '<div class="exam" id="finalExam"><div class="exam-head"><div><div class="exam-kicker">Финальный зачёт</div><div class="exam-title">Большой тест по курсу</div><p class="exam-intro">30 вопросов. Порог — 15 правильных (50%). Сертификат обезличенный: без имени, с датой, логотипом и результатом.</p></div><div class="exam-best" id="examBest"></div></div><div id="examForm">';
+    for (var i = 0; i < EXAM_QUESTIONS.length; i++) {
+      var q = EXAM_QUESTIONS[i];
+      h += '<div class="exam-q" data-q="' + i + '"><div class="exam-q-title"><span class="exam-num">' + (i + 1) + '</span><span>' + assistEscape(q.q) + '</span></div><div class="exam-options">';
+      for (var j = 0; j < q.o.length; j++) {
+        h += '<label class="exam-option" data-q="' + i + '" data-opt="' + j + '"><input type="radio" name="exam-q-' + i + '" value="' + j + '"><span>' + assistEscape(q.o[j]) + '</span></label>';
+      }
+      h += '</div></div>';
+    }
+    h += '</div><div class="exam-actions"><button type="button" class="exam-submit" id="examSubmit">Проверить ответы</button><button type="button" class="exam-reset" id="examReset">Сбросить</button></div><div class="exam-result" id="examResult" aria-live="polite"></div><div class="exam-certificate" id="examCertificate"></div></div>';
+    return h;
+  }
+
+  function updateExamBest() {
+    var el = document.getElementById('examBest');
+    if (!el) return;
+    var best = loadState('nau-exam-best', null);
+    el.innerHTML = (best && best.total) ? 'Лучший: <strong>' + best.score + ' / ' + best.total + '</strong> · ' + best.pct + '% · ' + assistEscape(best.date) : 'Пока нет результата';
+  }
+
+  function examCertificateHtml(score, total, pct, date, id, logo) {
+    return '<div class="certificate" id="certificate"><div class="certificate-inner"><div class="cert-top"><img class="cert-logo" src="' + assistEscape(logo) + '" alt="научИИсь"><div><div class="cert-brand">научИИсь</div><div class="cert-brand-sub">практический гид</div></div></div><div class="cert-kicker">СЕРТИФИКАТ</div><h2>Зачёт по курсу</h2><p class="cert-name">Анонимный участник</p><p class="cert-line">успешно прошёл финальный тест</p><div class="cert-score">' + score + ' / ' + total + '<span>' + pct + '%</span></div><div class="cert-bottom"><span>Дата: ' + assistEscape(date) + '</span><span>ID: ' + assistEscape(id) + '</span></div><p class="cert-note">Сертификат подтверждает прохождение теста и не является документом об образовании. Имя не запрашивалось.</p></div></div>';
+  }
+
+  function printCertificate(score, total, pct, date, id, logo) {
+    var w = window.open('', '_blank');
+    if (!w) { alert('Разрешите всплывающие окна, чтобы скачать сертификат.'); return; }
+    var cert = examCertificateHtml(score, total, pct, date, id, logo);
+    var css = '@page{size:A4 landscape;margin:0}*{box-sizing:border-box}html,body{margin:0;padding:0;width:100%;height:100%;background:#fff}body{display:flex;align-items:center;justify-content:center;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}.certificate{width:100%;max-width:1120px;margin:0;padding:34px;border:0;border-radius:0;background:linear-gradient(145deg,#f8fbff,#fff 48%,#f3f7ff);box-shadow:none}.certificate-inner{padding:46px 54px;border:1px solid #dbeafe;border-radius:14px;text-align:center;background:radial-gradient(circle at 50% 0%,#fff 0%,#f8fbff 60%,#eef5ff 100%)}.cert-top{display:flex;align-items:center;justify-content:space-between;gap:14px;text-align:left;margin-bottom:32px}.cert-logo{height:48px;width:auto;display:block}.cert-brand{font-weight:900;font-size:20px;letter-spacing:-.04em;color:#0b3b7a;line-height:1.1}.cert-brand-sub{font-size:10px;text-transform:uppercase;letter-spacing:.9px;color:#6b7c93;margin-top:3px}.cert-kicker{font-size:12px;font-weight:900;letter-spacing:.24em;color:#0066ff;margin-bottom:12px}.certificate h2{font-size:52px;line-height:1.05;letter-spacing:-.05em;color:#0b1f3a;margin:0 0 10px}.cert-name{font-size:22px;font-weight:800;color:#0b3b7a;margin:0 0 4px}.cert-line{font-size:14px;color:#52647b;margin:0 0 22px}.cert-score{font-size:72px;font-weight:900;letter-spacing:-.06em;color:#0066ff;line-height:1}.cert-score span{font-size:16px;font-weight:700;letter-spacing:0;color:#52647b;margin-left:10px}.cert-bottom{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid #dbeafe;margin-top:28px;padding-top:16px;font-size:12px;color:#6b7c93}.cert-note{font-size:10px;line-height:1.45;color:#8494a8;margin:14px 0 0}';
+    w.document.open();
+    w.document.write('<!doctype html><html lang="ru"><head><meta charset="utf-8"><title>Сертификат научИИсь — зачёт</title><style>' + css + '</style></head><body>' + cert + '<scr' + 'ipt>window.onload=function(){setTimeout(function(){window.print();},350);};</scr' + 'ipt></body></html>');
+    w.document.close();
+    w.focus();
+  }
+
+  function initFinalExam() {
+    var form = document.getElementById('examForm');
+    var submit = document.getElementById('examSubmit');
+    var reset = document.getElementById('examReset');
+    var result = document.getElementById('examResult');
+    var certEl = document.getElementById('examCertificate');
+    if (!form || !submit) return;
+    updateExamBest();
+    function resetExam() {
+      form.reset();
+      var opts = form.querySelectorAll('.exam-option');
+      for (var i = 0; i < opts.length; i++) opts[i].classList.remove('correct', 'wrong');
+      result.className = 'exam-result';
+      result.innerHTML = '';
+      certEl.innerHTML = '';
+      certEl.style.display = 'none';
+      var top = document.getElementById('finalExam');
+      if (top) top.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    reset.addEventListener('click', resetExam);
+    submit.addEventListener('click', function() {
+      var correct = 0;
+      for (var i = 0; i < EXAM_QUESTIONS.length; i++) {
+        var q = EXAM_QUESTIONS[i];
+        var labels = form.querySelectorAll('.exam-option[data-q="' + i + '"]');
+        for (var l = 0; l < labels.length; l++) labels[l].classList.remove('correct', 'wrong');
+        var right = form.querySelector('.exam-option[data-q="' + i + '"][data-opt="' + q.a + '"]');
+        if (right) right.classList.add('correct');
+        var selected = form.querySelector('input[name="exam-q-' + i + '"]:checked');
+        if (selected) {
+          var val = parseInt(selected.value, 10);
+          if (val === q.a) correct++;
+          else {
+            var wrong = form.querySelector('.exam-option[data-q="' + i + '"][data-opt="' + val + '"]');
+            if (wrong) wrong.classList.add('wrong');
+          }
+        }
+      }
+      var total = EXAM_QUESTIONS.length;
+      var pct = Math.round(correct / total * 100);
+      var pass = correct >= Math.ceil(total / 2);
+      result.className = 'exam-result ' + (pass ? 'pass' : 'fail');
+      result.innerHTML = (pass ? 'Зачёт сдан: ' : 'Пока не хватает: ') + '<strong>' + correct + ' / ' + total + '</strong> · ' + pct + '%. ' + (pass ? 'Сертификат сформирован ниже.' : 'Нужно минимум ' + Math.ceil(total / 2) + ' правильных. Посмотрите ошибки и попробуйте снова.') + '<small>Правильные варианты подсвечены зелёным, ваши ошибки — красным.</small>';
+      certEl.innerHTML = '';
+      certEl.style.display = 'none';
+      if (pass) {
+        var date = new Date().toLocaleDateString('ru-RU', { day: 'numeric', month: 'long', year: 'numeric' });
+        var id = 'NII-' + Date.now().toString(36).toUpperCase().slice(-6);
+        var logo = new URL('static/logos/logo.webp', location.href).href;
+        certEl.innerHTML = examCertificateHtml(correct, total, pct, date, id, logo) + '<div class="cert-actions"><button type="button" id="examDownload">Скачать PDF</button><button type="button" id="examRetry">Пройти заново</button></div><div class="cert-hint">В окне печати выберите «Сохранить как PDF».</div>';
+        certEl.style.display = 'block';
+        var best = loadState('nau-exam-best', null);
+        if (!best || pct > best.pct) saveState('nau-exam-best', { score: correct, total: total, pct: pct, date: date });
+        updateExamBest();
+        certEl.querySelector('#examDownload').addEventListener('click', function() { printCertificate(correct, total, pct, date, id, logo); });
+        certEl.querySelector('#examRetry').addEventListener('click', resetExam);
+      }
+    });
+  }
+
   function buildQuiz(article, doc) {
     var items = CURATED_QUIZ[article.id] || autoQuiz(doc);
     var arr = getQuizArr(article.id, items.length);
@@ -1386,9 +1574,10 @@
     }
     html += buildArticleTOC(doc);
     html += '<div class="prose">' + article.content + '</div>';
+    if (article.id === 'exam') html += buildFinalExam();
     html += buildCalculator(article.id);
     if (STORIES[article.id]) html += '<div class="story"><div class="story-label">' + svg('message', 14) + ' Из практики</div><div class="story-body"><p>' + STORIES[article.id] + '</p></div><img src="static/images/cat-relax.webp" alt="Маркус отдыхает" class="story-cat" width="600" height="662" loading="lazy" decoding="async"></div>';
-    html += buildQuiz(article, doc);
+    if (article.id !== 'exam') html += buildQuiz(article, doc);
     html += '<div class="rating" id="ratingBlock">';
     html += '<div class="rating-title">Было полезно?</div>';
     html += '<div class="rating-buttons">';
@@ -1404,6 +1593,7 @@
     else html += '<div class="nav-link disabled"></div>';
     html += '</nav>';
     articleEl.innerHTML = html;
+    if (article.id === 'exam') initFinalExam();
     var sf = document.getElementById("siteFooter"); if (sf) sf.classList.add("ready");
     var prose = articleEl.querySelector('.prose');
     var hs = prose.querySelectorAll('h2');
@@ -1672,13 +1862,14 @@
   function assistRemoveTyping(el) { if (el && el.parentNode) el.parentNode.removeChild(el); }
   var ASSIST_TRIGGERS = [
     { re: /(хуй|хуя|хую|хуе|хуё|хуи)/, text: 'ХХХАХААХАХ СМЕШНО', sources: [] , noAI: true },
+    { re: /(политик|президент|путин|правительств|госдум|кремл|выбор[ыа]|санкц|войн|военн|спецоперац|украин|нато|бородин|кутузов|наполеон|сражен|битв)/, text: 'Политику, войны и исторические сражения я не обсуждаю. Могу помочь с материалами курса: вайбкодинг, AI-инструменты, разработка, продажи, право, клиенты и бизнес.', sources: [] , noAI: true },
     { re: /^(привет|здравств|хай|добрый день|доброе утро|добрый вечер|ку)/, text: 'Привет! Я Маркус — помощник по этому гиду. Могу найти статью по теме, объяснить термин или подсказать, с чего начать. Что вас интересует?', sources: [] , noAI: true },
-    { re: /(ты кто|кто ты|кто вы|вы кто|кто такой маркус|кто такой ты|как тебя зовут|представься|расскажи о себе|что ты умеешь|что ты за|ты бот|что за бот|кто тебя создал|кто тебя сделал|маркус)/, text: 'Я Маркус — помощник по курсу научИИсь. Работаю локально: ищу по всем 72 статьям, показываю источники и помогаю выбрать следующий шаг. Умею отвечать про вайбкодинг, инструменты, MCP, субагентов, контекст, безопасность, продажи, право и бизнес.', sources: ['intro', 'ai-modes', 'tools-mcp'] , noAI: true },
+    { re: /(ты кто|кто ты|кто вы|вы кто|кто такой маркус|кто такой ты|как тебя зовут|представься|расскажи о себе|что ты умеешь|что ты за|ты бот|что за бот|кто тебя создал|кто тебя сделал|маркус)/, text: 'Я Маркус — помощник по курсу научИИсь. Работаю локально: ищу по всем 73 статьям, показываю источники и помогаю выбрать следующий шаг. Умею отвечать про вайбкодинг, инструменты, MCP, субагентов, контекст, безопасность, продажи, право и бизнес.', sources: ['intro', 'ai-modes', 'tools-mcp'] , noAI: true },
     { re: /(спасибо|благодар)/, text: 'Пожалуйста! Если нужно, могу подобрать статьи по следующей теме или собрать короткий план чтения.', sources: [] , noAI: true },
     { re: /(пока|до свидания|до встречи)/, text: 'До связи! Возвращайтесь, когда захочется разобраться в следующей теме.', sources: [] , noAI: true },
-    { re: /(сколько).*(стат|материал)/, text: 'На сайте 72 статьи в 9 категориях: Основы, Карьера, Инструменты, Agentic Engineering, Продажи, Право, Клиенты, Бизнес и Психология.', sources: ['intro', 'ai-modes'] , noAI: true },
+    { re: /(сколько).*(стат|материал)/, text: 'На сайте 73 статьи в 10 категориях: Основы, Карьера, Инструменты, Agentic Engineering, Продажи, Право, Клиенты, Бизнес, Психология и Зачёт.', sources: ['intro', 'ai-modes'] , noAI: true },
     { re: /(как пользоваться|навигац|как читать|где читать|как открыть)/, text: 'Всё просто: слева — меню категорий, в начале статьи — TL;DR и «Что внутри», в конце — квиз и «Что делать дальше». Прогресс сохраняется, а кнопка «Поделиться» даёт ссылку на конкретную статью. Тему можно переключить в шапке.', sources: ['intro', 'ai-modes'] , noAI: true },
-    { re: /(категор)/, text: 'Девять категорий: Основы, Карьера, Инструменты, Agentic Engineering, Продажи, Право, Клиенты, Бизнес и Психология. Скажите тему — подберу статьи.', sources: ['intro', 'ai-modes'] , noAI: true },
+    { re: /(категор)/, text: 'Десять категорий: Основы, Карьера, Инструменты, Agentic Engineering, Продажи, Право, Клиенты, Бизнес, Психология и Зачёт. Скажите тему — подберу статьи.', sources: ['intro', 'ai-modes'] , noAI: true },
     { re: /(с чего начать|как начать|нович|план чтения|роадмап|первый шаг)/, text: 'Начните с «Вайбкодинга: полное введение», затем «6 режимов работы с AI». Дальше — «Как работает AI-агент» и «Промпты, Rules и Skills». Если цель — деньги, добавьте «Работодатели России» и «Ценообразование».', sources: ['intro', 'ai-modes', 'agent-loop', 'prompt-rules-skills', 'employers', 'pricing'] , noAI: true },
     { re: /(что нового|agentic engineering|agentic|новые статьи|глоссари|словарь)/, text: 'Недавно добавил «Глоссарий вайбкодера», «Историю AI-инструментов», «Кто создаёт AI», «Продвинутый промптинг», «Тестирование AI-кода», «Токсичных клиентов», «Тайм-менеджмент», «Ментальное здоровье», «Прокрастинацию», «Нетворкинг», «Высокий чек» и «Страх неудачи».', sources: ['glossary', 'ai-history', 'ai-teams', 'prompt-advanced', 'testing-ai-code', 'toxic-clients', 'time-management', 'mental-health', 'procrastination', 'networking', 'high-ticket', 'fear-of-failure', 'ai-modes', 'agent-loop', 'prompt-rules-skills', 'tools-mcp', 'subagents-hooks', 'context-engineering', 'agent-workflow', 'rag-basics'] , noAI: true },
     { re: /(вайбкодинг|vibe coding|карпати|vibe)/, text: 'Вайбкодинг — это разработка через диалог с агентом: человек ставит цель и проверяет результат, машина пишет код. В статье разобраны пять определений, риски и спектр подходов.', sources: ['intro', 'ai-modes', 'agent-loop'] },
@@ -1710,7 +1901,7 @@
     { re: /(поделит|ссылк|share)/, text: 'Кнопка «Поделиться» находится под заголовком статьи. Ссылка ведёт на конкретную статью, а на мобильном открывается системное меню.', sources: [] , noAI: true },
     { re: /(квиз|проверь себя|тест|вопросы в конце)/, text: 'В конце каждой статьи есть «Проверь себя»: 2–3 вопроса, ответы и счётчик «Знал / Забыл». Это активное вспоминание — работает лучше пассивного чтения.', sources: [] , noAI: true },
     { re: /(прогресс|прочитан|сколько осталось)/, text: 'Прогресс виден в сайдбаре и в шапке. Полоска под шапкой показывает, сколько осталось до конца статьи, а прочитанные статьи отмечаются галочкой.', sources: [] , noAI: true },
-    { re: /(как найти|поиск|найти статью|где статья)/, text: 'Можно открыть категорию в боковом меню, спросить меня или использовать «Что внутри» в начале статьи. Я ищу по всем 72 материалам и даю ссылки на источники.', sources: ['intro', 'ai-modes'] , noAI: true }
+    { re: /(как найти|поиск|найти статью|где статья)/, text: 'Можно открыть категорию в боковом меню, спросить меня или использовать «Что внутри» в начале статьи. Я ищу по всем 73 материалам и даю ссылки на источники.', sources: ['intro', 'ai-modes'] , noAI: true }
   ];
   function assistIntent(q) {
     var n = assistNormalize(q);
