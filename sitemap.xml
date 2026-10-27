@@ -241,6 +241,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://xn--80aqaqb1b2a.xn--p1ai/?article=toxic-clients</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://xn--80aqaqb1b2a.xn--p1ai/?article=partnerships</loc>
     <lastmod>2026-10-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -337,6 +343,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://xn--80aqaqb1b2a.xn--p1ai/?article=time-management</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://xn--80aqaqb1b2a.xn--p1ai/?article=startup</loc>
     <lastmod>2026-10-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -387,6 +399,12 @@
   <url>
     <loc>https://xn--80aqaqb1b2a.xn--p1ai/?article=burnout</loc>
     <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xn--80aqaqb1b2a.xn--p1ai/?article=mental-health</loc>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
