@@ -196,7 +196,7 @@ CSP = (
     "font-src 'self' https://fonts.gstatic.com; "
     "img-src 'self' data:; "
     "connect-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; "
-    "frame-src https://vkvideo.ru; "
+    "frame-src https://vkvideo.ru https://login.vk.ru https://id.vk.com; "
     "manifest-src 'self'; object-src 'none'; base-uri 'self'; "
     "form-action 'self'; frame-ancestors 'self'"
 )

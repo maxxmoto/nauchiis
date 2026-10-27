@@ -18,14 +18,14 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="msapplication-TileColor" content="#0066ff">
 <link rel="canonical" id="canonicalLink" href="https://xn--80aqaqb1b2a.xn--p1ai/">
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
-<link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
-<link rel="icon" href="favicon.ico" sizes="any">
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/svg+xml" href="static/icons/favicon.svg">
+<link rel="icon" type="image/png" sizes="16x16" href="static/icons/favicon-16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="static/icons/favicon-32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="static/icons/favicon-48.png">
+<link rel="icon" href="static/icons/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" sizes="180x180" href="static/icons/apple-touch-icon.png">
 <link rel="manifest" href="manifest.json">
-<link rel="preload" as="image" href="logo.webp" fetchpriority="high">
+<link rel="preload" as="image" href="static/logos/logo.webp" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
@@ -35,17 +35,17 @@
 <meta property="og:title" content="научИИсь — практический гид по вайбкодингу и AI-инструментам">
 <meta property="og:description" content="61 статья об AI-инструментах, разработке, безопасности, продажах, праве и запуске проектов. Кейсы, чек-листы, калькуляторы и проверка знаний.">
 <meta property="og:url" content="https://xn--80aqaqb1b2a.xn--p1ai/">
-<meta property="og:image" content="https://xn--80aqaqb1b2a.xn--p1ai/og.png">
-<meta property="og:image:type" content="image/png">
-<meta property="og:image:width" content="1536">
-<meta property="og:image:height" content="1024">
+<meta property="og:image" content="https://xn--80aqaqb1b2a.xn--p1ai/static/social/og.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1170">
+<meta property="og:image:height" content="699">
 <meta property="og:image:alt" content="научИИсь — практический гид по вайбкодингу">
 <link rel="alternate" hreflang="ru" href="https://xn--80aqaqb1b2a.xn--p1ai/">
 <link rel="alternate" hreflang="x-default" href="https://xn--80aqaqb1b2a.xn--p1ai/">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="научИИсь — практический гид по вайбкодингу и AI-инструментам">
 <meta name="twitter:description" content="61 статья об AI-инструментах, разработке, безопасности, продажах, праве и запуске проектов.">
-<meta name="twitter:image" content="https://xn--80aqaqb1b2a.xn--p1ai/og.png">
+<meta name="twitter:image" content="https://xn--80aqaqb1b2a.xn--p1ai/static/social/og.jpg">
 <meta name="twitter:image:alt" content="научИИсь — практический гид по вайбкодингу">
 <script type="application/ld+json">
 {
@@ -64,7 +64,7 @@
       "@id": "./#organization",
       "name": "научИИсь",
       "description": "Практический гид по вайбкодингу, AI-инструментам, разработке и продажам",
-      "logo": { "@type": "ImageObject", "url": "icon-512.png", "width": 512, "height": 512 }
+      "logo": { "@type": "ImageObject", "url": "static/icons/icon-512.png", "width": 512, "height": 512 }
     },
     {
       "@type": "CollectionPage",
@@ -132,7 +132,7 @@
   [data-theme="dark"] .course-vs-card.bad .course-vs-title{color:#ffb3b3;}
   .course-meme{display:block;width:100%;max-width:720px;height:auto;margin:20px auto;border-radius:14px;border:1px solid var(--border);box-shadow:0 10px 26px rgba(0,0,0,.10);}
   [data-theme="dark"] .course-meme{box-shadow:0 12px 30px rgba(0,0,0,.4);}
-  .course-hero{position:relative;min-height:400px;margin:0 0 26px;border-radius:26px;overflow:hidden;border:1px solid rgba(255,255,255,.75);box-shadow:0 18px 50px rgba(61,87,145,.16);background:url('course-hero.webp') center/cover no-repeat,linear-gradient(135deg,#e8f4ff,#f7f9fc);display:flex;align-items:flex-end;}
+  .course-hero{position:relative;min-height:400px;margin:0 0 26px;border-radius:26px;overflow:hidden;border:1px solid rgba(255,255,255,.75);box-shadow:0 18px 50px rgba(61,87,145,.16);background:url('static/images/course-hero.webp') center/cover no-repeat,linear-gradient(135deg,#e8f4ff,#f7f9fc);display:flex;align-items:flex-end;}
   .course-hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(247,251,255,.98) 0%,rgba(247,251,255,.9) 34%,rgba(247,251,255,.24) 64%,rgba(247,251,255,0) 100%);}
   .course-hero-inner{position:relative;z-index:1;max-width:62%;padding:44px 40px;}
   .course-hero-kicker{font-size:12px;font-weight:750;letter-spacing:.08em;text-transform:uppercase;color:#5b6b86;margin-bottom:12px;}
@@ -150,16 +150,17 @@
   [data-theme="dark"] .course-hero-btn{background:#141d2c;color:#e9eef7;box-shadow:0 10px 30px rgba(0,0,0,.35);}
   [data-theme="dark"] .course-hero-btn .arrow{background:#1c2a41;color:#8ec5ff;}
   @media(max-width:640px){.course-hero{min-height:360px;border-radius:20px;}.course-hero::before{background:linear-gradient(0deg,rgba(247,251,255,.98) 0%,rgba(247,251,255,.82) 48%,rgba(247,251,255,.06) 100%);}.course-hero-inner{max-width:100%;padding:24px 20px;}.course-hero-title{font-size:clamp(48px,14vw,64px);}.course-hero-text{font-size:14px;max-width:310px;}[data-theme="dark"] .course-hero::before{background:linear-gradient(0deg,rgba(11,15,23,.98) 0%,rgba(11,15,23,.82) 48%,rgba(11,15,23,.06) 100%);}}
-  .quote-photo{display:grid;grid-template-columns:1fr 180px;gap:20px;align-items:center;margin:24px 0;padding:20px 22px;border-radius:16px;background:linear-gradient(135deg,#f5f9ff,#fff);border:1px solid #dbeafe;}
+  .course-og{width:100%;max-width:420px;margin:0 auto 24px;}
+  .course-og img,.prose .course-og img{display:block;width:100%;height:auto;border-radius:14px;border:1px solid var(--border);}
+  @media(max-width:640px){.course-og{max-width:100%;}}
+  .quote-photo{position:relative;overflow:hidden;display:flex;align-items:center;min-height:340px;margin:24px 0;padding:24px 250px 24px 24px;border-radius:16px;background:linear-gradient(135deg,#f5f9ff,#fff);border:1px solid #dbeafe;}
   .quote-photo blockquote{font-size:clamp(20px,2.8vw,28px);line-height:1.35;font-weight:800;color:#0b3b7a;letter-spacing:-.4px;margin:0;}
-  .quote-photo figure{margin:0;text-align:center;}
-  .prose .quote-photo img{display:block;width:180px;height:auto;border-radius:14px;border:1px solid var(--border);}
-  .quote-photo figcaption{font-size:10px;text-transform:uppercase;letter-spacing:.7px;color:var(--text-soft);margin-top:6px;}
+  .quote-photo figure{position:absolute;right:0;bottom:0;margin:0;width:220px;line-height:0;}
+  .prose .quote-photo img{display:block;width:100%;height:auto;border:0;border-radius:0;}
   [data-theme="dark"] .quote-photo{background:linear-gradient(135deg,#0f1d33,#111827);border-color:#1e3a5f;}
   [data-theme="dark"] .quote-photo blockquote{color:#cfe2ff;}
-  [data-theme="dark"] .quote-photo figcaption{color:#7b8799;}
   .prose img.tool-hero-logo{display:block;width:auto;height:auto;max-width:260px;margin:18px 0;border-radius:10px;}
-  @media(max-width:640px){.quote-photo{grid-template-columns:1fr;gap:14px;padding:16px;}.quote-photo figure{order:2;}.quote-photo blockquote{order:1;}.prose .quote-photo img{width:150px;margin:0 auto;}.prose img.tool-hero-logo{max-width:220px;}}
+  @media(max-width:640px){.quote-photo{display:block;min-height:0;padding:18px 18px 210px;}.quote-photo blockquote{font-size:20px;}.quote-photo figure{width:145px;}.prose img.tool-hero-logo{max-width:220px;}}
   @media(max-width:640px){.course-vs{grid-template-columns:1fr;gap:12px;}.course-vs-title{font-size:38px;}.course-vs-card.good .course-vs-title{font-size:30px;}}
   .prose img.tool-logo{display:inline-block;height:30px;width:auto;max-width:none;vertical-align:middle;margin-right:8px;border-radius:0;}
   .prose img.tool-logo-wide{height:26px;margin-right:0;}
@@ -175,12 +176,12 @@
   .logo-item{display:flex;align-items:center;justify-content:center;width:150px;height:64px;padding:0 12px;margin-right:12px;background:#fff;border:1px solid var(--border);border-radius:12px;flex-shrink:0;box-sizing:border-box;box-shadow:0 2px 8px rgba(16,24,40,.04);transition:border-color .15s,box-shadow .15s;}
   .logo-item:hover{border-color:var(--accent);box-shadow:0 6px 18px rgba(0,102,255,.12);}
   .prose .logo-item img{display:block;height:34px;width:auto;max-width:126px;object-fit:contain;}
-  .prose .logo-item img[src="victory-group.webp"],.prose .logo-item img[src="s7.svg"]{height:42px;max-width:80px;}
+  .prose .logo-item img[src="static/logos/victory-group.webp"],.prose .logo-item img[src="static/logos/s7.svg"]{height:42px;max-width:80px;}
   [data-theme="dark"] .logo-item{background:#f8fafc;border-color:#2a3648;}
   [data-theme="dark"] .logo-item:hover{border-color:#5b9dff;}
   .logo-marquee:hover .logo-track{animation-play-state:paused;}
   @keyframes logoScroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
-  @media(max-width:640px){.logo-marquee{margin:18px 0 22px;}.logo-item{width:128px;height:54px;padding:0 10px;}.prose .logo-item img{height:28px;max-width:104px;}.prose .logo-item img[src="victory-group.webp"],.prose .logo-item img[src="s7.svg"]{height:34px;max-width:64px;}}
+  @media(max-width:640px){.logo-marquee{margin:18px 0 22px;}.logo-item{width:128px;height:54px;padding:0 10px;}.prose .logo-item img{height:28px;max-width:104px;}.prose .logo-item img[src="static/logos/victory-group.webp"],.prose .logo-item img[src="static/logos/s7.svg"]{height:34px;max-width:64px;}}
   @media(prefers-reduced-motion:reduce){.logo-marquee{overflow:visible;mask-image:none;-webkit-mask-image:none;}.logo-track{animation:none;flex-wrap:wrap;justify-content:center;width:100%;}}
   .prose code{background:var(--bg-code);color:#d14;padding:2px 6px;border-radius:4px;font-size:13.5px;font-family:'JetBrains Mono',monospace;font-weight:500;}
   .prose a{color:var(--accent);text-decoration:underline;text-underline-offset:2px;}
@@ -670,7 +671,7 @@
     <button class="menu-btn" id="menuBtn" aria-label="Меню" aria-expanded="false" aria-controls="sidebar">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
     </button>
-    <div class="brand"><img src="logo.webp" alt="научИИсь" class="brand-logo" width="400" height="200" decoding="async" loading="eager" fetchpriority="high"><span class="brand-sub">· гид</span></div>
+    <div class="brand"><img src="static/logos/logo.webp" alt="научИИсь" class="brand-logo" width="400" height="200" decoding="async" loading="eager" fetchpriority="high"><span class="brand-sub">· гид</span></div>
     <div class="header-spacer"></div>
     <button class="theme-btn" id="themeBtn" aria-label="Переключить тему" title="Переключить тему">
       <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
@@ -680,7 +681,7 @@
   </header>
   <div class="read-progress" id="readProgress"><div class="read-progress-fill" id="readProgressFill"></div></div>
   <div class="read-remaining" id="readRemaining"></div>
-  <main class="content" id="content"><article class="article" id="article"></article><footer class="site-footer" id="siteFooter"><img src="footer.webp" alt="научИИсь — больше чем просто код" width="1400" height="427" loading="lazy" decoding="async"></footer></main>
+  <main class="content" id="content"><article class="article" id="article"></article><footer class="site-footer" id="siteFooter"><img src="static/images/footer.webp" alt="научИИсь — больше чем просто код" width="1400" height="427" loading="lazy" decoding="async"></footer></main>
   <aside class="sidebar" id="sidebar">
     <div class="progress-card"><div class="progress-label">Прогресс</div><div class="progress-count"><strong id="progressRead">0</strong> из <strong id="progressTotal">—</strong> статей</div><div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div></div>
     <nav class="toc" id="toc" aria-label="Содержание"></nav>
@@ -690,13 +691,13 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
   </button>
   <button class="assistant-fab" id="assistantFab" aria-label="Открыть Маркуса" title="Маркус — помощник по курсу" aria-expanded="false" aria-controls="assistant">
-    <img src="cat-ai.webp" alt="" width="360" height="352" loading="lazy" decoding="async">
+    <img src="static/images/cat-ai.webp" alt="" width="360" height="352" loading="lazy" decoding="async">
     <span class="assistant-ripples" aria-hidden="true"><span></span><span></span><span></span></span>
   </button>
   <div class="assistant-hint" id="assistantHint" role="status" aria-live="polite" aria-hidden="true"></div>
   <section class="assistant" id="assistant" role="dialog" aria-label="Маркус — помощник по курсу" aria-hidden="true">
     <div class="assistant-head">
-      <div class="assistant-avatar"><img src="cat-ai.webp" alt="Маркус" width="360" height="352" loading="lazy" decoding="async"></div>
+      <div class="assistant-avatar"><img src="static/images/cat-ai.webp" alt="Маркус" width="360" height="352" loading="lazy" decoding="async"></div>
       <div class="assistant-titles"><div class="assistant-title">Маркус</div></div>
       <button class="assistant-icon-btn" id="assistantClose" aria-label="Закрыть Маркуса" title="Закрыть"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
     </div>
@@ -1009,7 +1010,7 @@
     var fig = document.createElement('figure');
     fig.className = 'callout-cat-fig';
     var img = document.createElement('img');
-    img.src = 'cat-warning.webp';
+    img.src = 'static/images/cat-warning.webp';
     img.alt = 'Маркус предупреждает';
     img.title = 'Маркус';
     img.className = 'callout-cat';
@@ -1277,13 +1278,13 @@
     setMeta('meta[property="og:title"]', 'content', article.title + ' — научИИсь');
     setMeta('meta[property="og:description"]', 'content', desc);
     setMeta('meta[property="og:url"]', 'content', url);
-    setMeta('meta[property="og:image"]', 'content', assetBase + 'og.png');
+    setMeta('meta[property="og:image"]', 'content', assetBase + 'static/social/og.jpg');
     setMeta('meta[name="twitter:title"]', 'content', article.title + ' — научИИсь');
     setMeta('meta[name="twitter:description"]', 'content', desc);
-    setMeta('meta[name="twitter:image"]', 'content', assetBase + 'og.png');
+    setMeta('meta[name="twitter:image"]', 'content', assetBase + 'static/social/og.jpg');
     var faq = extractFAQ(doc);
     var graph = [
-      { "@type": "Article", "headline": article.title, "description": desc, "articleSection": article.category, "inLanguage": "ru", "url": url, "mainEntityOfPage": url, "dateModified": "2026-10-26", "wordCount": wordCount(article.content), "timeRequired": "PT" + minutes + "M", "isAccessibleForFree": true, "keywords": article.category + ", вайбкодинг, AI-инструменты", "author": { "@type": "Organization", "name": "научИИсь" }, "publisher": { "@type": "Organization", "name": "научИИсь", "logo": { "@type": "ImageObject", "url": assetBase + "icon-512.png", "width": 512, "height": 512 } }, "image": assetBase + "og.png" },
+      { "@type": "Article", "headline": article.title, "description": desc, "articleSection": article.category, "inLanguage": "ru", "url": url, "mainEntityOfPage": url, "dateModified": "2026-10-26", "wordCount": wordCount(article.content), "timeRequired": "PT" + minutes + "M", "isAccessibleForFree": true, "keywords": article.category + ", вайбкодинг, AI-инструменты", "author": { "@type": "Organization", "name": "научИИсь" }, "publisher": { "@type": "Organization", "name": "научИИсь", "logo": { "@type": "ImageObject", "url": assetBase + "static/icons/icon-512.png", "width": 512, "height": 512 } }, "image": assetBase + "static/social/og.jpg" },
       { "@type": "BreadcrumbList", "itemListElement": [ { "@type": "ListItem", "position": 1, "name": "Главная", "item": assetBase }, { "@type": "ListItem", "position": 2, "name": article.category }, { "@type": "ListItem", "position": 3, "name": article.title, "item": url } ] }
     ];
     if (faq.length) graph.push({ "@type": "FAQPage", "mainEntity": faq.map(function(f){ return { "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } }; }) });
@@ -1321,19 +1322,20 @@
     html += '<span class="share-label">Поделиться</span><div class="share-btns">';
     html += '<button class="share-btn share-native" type="button" aria-label="Поделиться статьёй">' + svg('share', 16) + '<span class="share-text">Поделиться</span></button>';
     html += '<a class="share-btn" href="https://t.me/share/url?url=' + su + '&amp;text=' + st + '" target="_blank" rel="noopener noreferrer" aria-label="Поделиться в Telegram" title="Telegram">' + svg('telegram', 17) + '</a>';
-    html += '<a class="share-btn" href="https://wa.me/?text=' + encodeURIComponent(shareText + ' ' + shareUrl) + '" target="_blank" rel="noopener noreferrer" aria-label="Поделиться в WhatsApp" title="WhatsApp">' + svg('whatsapp', 17) + '</a>';
     html += '<a class="share-btn" href="https://vk.com/share.php?url=' + su + '&amp;title=' + encodeURIComponent(article.title) + '" target="_blank" rel="noopener noreferrer" aria-label="Поделиться во ВКонтакте" title="ВКонтакте">' + svg('vk', 17) + '</a>';
-    html += '<a class="share-btn" href="https://twitter.com/intent/tweet?url=' + su + '&amp;text=' + encodeURIComponent(article.title) + '" target="_blank" rel="noopener noreferrer" aria-label="Поделиться в X" title="X">' + svg('x', 16) + '</a>';
     html += '<button class="share-btn share-copy" type="button" aria-label="Скопировать ссылку" title="Скопировать ссылку">' + svg('link', 16) + '<span class="share-text">Скопировать</span></button>';
     html += '</div><div class="share-feedback" id="shareFeedback" aria-live="polite"></div></div>';
     html += buildTLDR(article, doc, minutes);
+    if (article.id === 'course-guide') {
+      html += '<div class="course-og"><img src="static/social/og.webp" alt="научИИсь — обложка курса" loading="lazy" decoding="async"></div>';
+    }
     if (article.id === 'intro') {
       html += '<div class="video-embed"><iframe src="https://vkvideo.ru/video_ext.php?oid=-138398280&amp;id=456241166&amp;hash=9e51925893e3c9e6" width="640" height="360" frameborder="0" allowfullscreen="1" style="background-color:#000" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Видео: Вайбкодинг — полное введение"></iframe></div>';
     }
     html += buildArticleTOC(doc);
     html += '<div class="prose">' + article.content + '</div>';
     html += buildCalculator(article.id);
-    if (STORIES[article.id]) html += '<div class="story"><div class="story-label">' + svg('message', 14) + ' Из практики</div><div class="story-body"><p>' + STORIES[article.id] + '</p></div><img src="cat-relax.webp" alt="Маркус отдыхает" class="story-cat" width="600" height="662" loading="lazy" decoding="async"></div>';
+    if (STORIES[article.id]) html += '<div class="story"><div class="story-label">' + svg('message', 14) + ' Из практики</div><div class="story-body"><p>' + STORIES[article.id] + '</p></div><img src="static/images/cat-relax.webp" alt="Маркус отдыхает" class="story-cat" width="600" height="662" loading="lazy" decoding="async"></div>';
     html += buildQuiz(article, doc);
     html += '<div class="rating" id="ratingBlock">';
     html += '<div class="rating-title">Было полезно?</div>';
