@@ -12,7 +12,7 @@
 - `index.html`, `articles-data.js` — статический сайт
 - `server.py` — FastAPI: статика + `/api/marcus` для GigaChat
 - `requirements.txt` — зависимости бэкенда
-- `og.png`, `*.webp`, `logo.png`, `favicon*` — ассеты
+- `og.png`, `*.webp`, `logo.webp`, `favicon*` — ассеты
 - `Dockerfile`, `amvera.yaml` — деплой на Amvera
 - `.env.example` — пример переменных для локального запуска
 
