@@ -12,7 +12,7 @@ COPY server.py .
 RUN mkdir -p static
 
 COPY index.html articles-data.js manifest.json robots.txt sitemap.xml ./static/
-COPY logo.png og.png favicon.svg favicon.ico favicon-16.png favicon-32.png favicon-48.png apple-touch-icon.png icon-192.png icon-512.png ./static/
+COPY logo.png og.png claude.png claudecode-color.png codex-color.png cursor.webp favicon.svg favicon.ico favicon-16.png favicon-32.png favicon-48.png apple-touch-icon.png icon-192.png icon-512.png ./static/
 COPY cat-warning.webp cat-relax.webp cat-ai.webp footer.webp ./static/
 
 EXPOSE 80
