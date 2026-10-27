@@ -204,6 +204,11 @@ async def healthz():
     return PlainTextResponse("ok\n")
 
 
+@app.get("/api/health")
+async def api_health():
+    return {"ok": True, "gigachat_configured": bool(auth_key())}
+
+
 @app.post("/api/marcus")
 async def marcus(payload: AskRequest, request: Request):
     if not auth_key():
