@@ -10,12 +10,15 @@
 ## Что внутри
 
 - `index.html`, `articles-data.js` — статический сайт
+- `terms.html` — пользовательское соглашение
+- `ai-disclaimer.html` — дисклеймер об AI
 - `server.py` — FastAPI: статика + `/api/marcus` для GigaChat
 - `requirements.txt` — зависимости бэкенда
 - `static/images/` — иллюстрации и фото
 - `static/logos/` — логотипы компаний и инструментов
 - `static/icons/` — favicon и PWA-иконки
 - `static/social/` — OG-обложки (`og.jpg`, `og.webp`)
+- `static/css/` — стили юридических страниц
 - `Dockerfile`, `amvera.yaml` — деплой на Amvera
 - `.env.example` — пример переменных для локального запуска
 
