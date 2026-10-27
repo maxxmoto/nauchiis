@@ -1,6 +1,7 @@
 import base64
 import logging
 import os
+import re
 import time
 import uuid
 from collections import defaultdict, deque
@@ -52,10 +53,31 @@ class NotConfigured(RuntimeError):
     pass
 
 
+class InvalidAuthKey(RuntimeError):
+    pass
+
+
+def normalize_auth_key(raw: str) -> str:
+    key = raw.strip().strip('"').strip("'").strip()
+    key = re.sub(r"\s+", "", key)
+    if key.lower().startswith("basic "):
+        key = key[6:].strip()
+    if ":" in key:
+        key = base64.b64encode(key.encode("utf-8")).decode("ascii")
+    try:
+        key.encode("ascii")
+    except UnicodeEncodeError:
+        raise InvalidAuthKey(
+            "GIGACHAT_AUTH_KEY содержит не-ASCII символ. Скопируйте Authorization key заново "
+            "и проверьте, что в нём только латинские буквы, цифры, +, / и =."
+        )
+    return key
+
+
 def auth_key() -> str:
     key = os.getenv("GIGACHAT_AUTH_KEY", "").strip()
     if key:
-        return key
+        return normalize_auth_key(key)
     client_id = os.getenv("GIGACHAT_CLIENT_ID", "").strip()
     client_secret = os.getenv("GIGACHAT_CLIENT_SECRET", "").strip()
     if client_id and client_secret:
@@ -208,14 +230,24 @@ async def healthz():
 
 @app.get("/api/health")
 async def api_health(request: Request, probe: bool = False):
+    key_error = None
+    try:
+        configured = bool(auth_key())
+    except InvalidAuthKey as exc:
+        configured = False
+        key_error = str(exc)
     result = {
         "ok": True,
-        "gigachat_configured": bool(auth_key()),
+        "gigachat_configured": configured,
         "scope": GIGACHAT_SCOPE,
         "model": GIGACHAT_MODEL,
         "verify_ssl": VERIFY_SSL,
     }
-    if probe and auth_key():
+    if key_error:
+        result["gigachat_error"] = "InvalidAuthKey"
+        result["gigachat_error_message"] = key_error
+        return result
+    if probe and configured:
         try:
             token = await get_token(request.app.state.client)
             result["gigachat_token"] = True
@@ -239,18 +271,26 @@ async def api_health(request: Request, probe: bool = False):
         except Exception as exc:
             result["gigachat_token"] = False
             result["gigachat_error"] = type(exc).__name__
+            if isinstance(exc, InvalidAuthKey):
+                result["gigachat_error_message"] = str(exc)
     return result
 
 
 @app.post("/api/marcus")
 async def marcus(payload: AskRequest, request: Request):
-    if not auth_key():
+    try:
+        configured = bool(auth_key())
+    except InvalidAuthKey as exc:
+        return JSONResponse({"error": str(exc)}, status_code=503)
+    if not configured:
         return JSONResponse({"error": "GigaChat is not configured"}, status_code=503)
     if not allowed(client_ip(request)):
         return JSONResponse({"error": "Too many requests"}, status_code=429)
     try:
         answer = await ask_gigachat(request.app.state.client, payload)
         return {"answer": answer}
+    except InvalidAuthKey as exc:
+        return JSONResponse({"error": str(exc)}, status_code=503)
     except NotConfigured:
         return JSONResponse({"error": "GigaChat is not configured"}, status_code=503)
     except httpx.HTTPStatusError as exc:

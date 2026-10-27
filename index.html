@@ -125,14 +125,15 @@
   }
   .logo-marquee{position:relative;margin:22px 0 28px;padding:4px 0;overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);}
   .logo-track{display:flex;width:max-content;animation:logoScroll 32s linear infinite;}
-  .logo-item{display:flex;align-items:center;justify-content:center;height:56px;padding:0 18px;margin-right:12px;background:#fff;border:1px solid var(--border);border-radius:12px;flex-shrink:0;box-shadow:0 2px 8px rgba(16,24,40,.04);transition:border-color .15s,box-shadow .15s;}
+  .logo-item{display:flex;align-items:center;justify-content:center;width:150px;height:64px;padding:0 12px;margin-right:12px;background:#fff;border:1px solid var(--border);border-radius:12px;flex-shrink:0;box-sizing:border-box;box-shadow:0 2px 8px rgba(16,24,40,.04);transition:border-color .15s,box-shadow .15s;}
   .logo-item:hover{border-color:var(--accent);box-shadow:0 6px 18px rgba(0,102,255,.12);}
-  .prose .logo-item img{display:block;height:32px;width:auto;max-width:132px;object-fit:contain;}
+  .prose .logo-item img{display:block;height:34px;width:auto;max-width:126px;object-fit:contain;}
+  .prose .logo-item img[src="victory-group.webp"],.prose .logo-item img[src="s7.svg"]{height:42px;max-width:80px;}
   [data-theme="dark"] .logo-item{background:#f8fafc;border-color:#2a3648;}
   [data-theme="dark"] .logo-item:hover{border-color:#5b9dff;}
   .logo-marquee:hover .logo-track{animation-play-state:paused;}
   @keyframes logoScroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
-  @media(max-width:640px){.logo-marquee{margin:18px 0 22px;}.logo-item{height:48px;padding:0 14px;}.prose .logo-item img{height:26px;max-width:112px;}}
+  @media(max-width:640px){.logo-marquee{margin:18px 0 22px;}.logo-item{width:128px;height:54px;padding:0 10px;}.prose .logo-item img{height:28px;max-width:104px;}.prose .logo-item img[src="victory-group.webp"],.prose .logo-item img[src="s7.svg"]{height:34px;max-width:64px;}}
   @media(prefers-reduced-motion:reduce){.logo-marquee{overflow:visible;mask-image:none;-webkit-mask-image:none;}.logo-track{animation:none;flex-wrap:wrap;justify-content:center;width:100%;}}
   .prose code{background:var(--bg-code);color:#d14;padding:2px 6px;border-radius:4px;font-size:13.5px;font-family:'JetBrains Mono',monospace;font-weight:500;}
   .prose a{color:var(--accent);text-decoration:underline;text-underline-offset:2px;}
