@@ -54,7 +54,7 @@ uvicorn server:app --host 0.0.0.0 --port 8000
 
 ## Проверка, что работает ИИ
 
-- Откройте `https://научиим.рф/api/health?probe=1` — должно быть `gigachat_configured: true` и `gigachat_token: true`.
+- Откройте `https://научиим.рф/api/health?probe=1` — должно быть `gigachat_configured: true`, `gigachat_token: true`, `gigachat_models: true` и список доступных моделей.
 - В чате под каждым ответом есть метка **GigaChat** или **Локальный ответ**.
 - DevTools → Network: содержательный вопрос должен дать `/api/marcus` → `200` и JSON с `answer`.
 - `503` — ключ не задан; `502`/`500` — ошибка GigaChat (смотрите логи Amvera); `429` — сработал лимит.

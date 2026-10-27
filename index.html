@@ -236,6 +236,9 @@
   .tldr li::marker{color:var(--accent);}
   .tldr p{font-size:13.5px;color:#1f2937;margin:0 0 12px;}
   .tldr-time{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:var(--accent);background:#fff;border:1px solid #dbeafe;border-radius:20px;padding:4px 11px;}
+  .video-embed{position:relative;width:100%;max-width:640px;aspect-ratio:16/9;margin:0 auto 24px;background:#000;border-radius:12px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.12);}
+  .video-embed iframe{position:absolute;inset:0;display:block;width:100%;height:100%;border:0;}
+  [data-theme="dark"] .video-embed{box-shadow:0 12px 34px rgba(0,0,0,.4);}
   .article-toc{border:1px solid var(--border);border-radius:10px;padding:14px 16px;margin:0 0 26px;background:var(--bg-sidebar);}
   .article-toc-title{font-size:10px;font-weight:700;letter-spacing:1.1px;text-transform:uppercase;color:var(--text-soft);margin-bottom:8px;}
   .toc-links{display:flex;flex-wrap:wrap;gap:6px;}
@@ -1261,6 +1264,9 @@
     html += '<button class="share-btn share-copy" type="button" aria-label="Скопировать ссылку" title="Скопировать ссылку">' + svg('link', 16) + '<span class="share-text">Скопировать</span></button>';
     html += '</div><div class="share-feedback" id="shareFeedback" aria-live="polite"></div></div>';
     html += buildTLDR(article, doc, minutes);
+    if (article.id === 'intro') {
+      html += '<div class="video-embed"><iframe src="https://vkvideo.ru/video_ext.php?oid=-138398280&amp;id=456241166&amp;hash=9e51925893e3c9e6" width="640" height="360" frameborder="0" allowfullscreen="1" style="background-color:#000" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Видео: Вайбкодинг — полное введение"></iframe></div>';
+    }
     html += buildArticleTOC(doc);
     html += '<div class="prose">' + article.content + '</div>';
     html += buildCalculator(article.id);

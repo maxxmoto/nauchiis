@@ -17,7 +17,8 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("marcus")
 
 GIGACHAT_OAUTH_URL = os.getenv("GIGACHAT_OAUTH_URL", "https://ngw.devices.sberbank.ru:9443/api/v2/oauth")
-GIGACHAT_API_URL = os.getenv("GIGACHAT_API_URL", "https://gigachat.devices.sberbank.ru/api/v1/chat/completions")
+GIGACHAT_API_URL = os.getenv("GIGACHAT_API_URL", "https://api.giga.chat/v1/chat/completions")
+GIGACHAT_MODELS_URL = os.getenv("GIGACHAT_MODELS_URL", "https://api.giga.chat/v1/models")
 GIGACHAT_SCOPE = os.getenv("GIGACHAT_SCOPE", "GIGACHAT_API_PERS")
 GIGACHAT_MODEL = os.getenv("GIGACHAT_MODEL", "GigaChat")
 VERIFY_SSL = os.getenv("GIGACHAT_VERIFY_SSL", "false").lower() in ("1", "true", "yes", "on")
@@ -173,6 +174,7 @@ CSP = (
     "font-src 'self' https://fonts.gstatic.com; "
     "img-src 'self' data:; "
     "connect-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; "
+    "frame-src https://vkvideo.ru; "
     "manifest-src 'self'; object-src 'none'; base-uri 'self'; "
     "form-action 'self'; frame-ancestors 'self'"
 )
@@ -215,8 +217,25 @@ async def api_health(request: Request, probe: bool = False):
     }
     if probe and auth_key():
         try:
-            await get_token(request.app.state.client)
+            token = await get_token(request.app.state.client)
             result["gigachat_token"] = True
+            try:
+                response = await request.app.state.client.get(
+                    GIGACHAT_MODELS_URL,
+                    headers={"Authorization": f"Bearer {token}", "Accept": "application/json"},
+                )
+                response.raise_for_status()
+                data = response.json()
+                result["gigachat_models"] = True
+                if isinstance(data, dict) and isinstance(data.get("data"), list):
+                    result["models"] = [
+                        str(item.get("id"))
+                        for item in data["data"]
+                        if isinstance(item, dict) and item.get("id")
+                    ][:10]
+            except Exception as exc:
+                result["gigachat_models"] = False
+                result["gigachat_models_error"] = type(exc).__name__
         except Exception as exc:
             result["gigachat_token"] = False
             result["gigachat_error"] = type(exc).__name__
