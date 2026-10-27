@@ -1,4 +1,4 @@
-# rebuild: cert-tg
+# rebuild: tg-preview
 FROM python:3.12-slim
 
 ENV PYTHONDONTWRITEBYTECODE=1 \
