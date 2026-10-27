@@ -1,4 +1,4 @@
-# rebuild: exam-politics
+# rebuild: git-video
 FROM python:3.12-slim
 
 ENV PYTHONDONTWRITEBYTECODE=1 \
