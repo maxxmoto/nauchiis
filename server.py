@@ -65,8 +65,9 @@ async def get_token(client: httpx.AsyncClient) -> str:
     key = auth_key()
     if not key:
         raise NotConfigured("GigaChat credentials are not configured")
+    auth_header = key if key.lower().startswith("basic ") else f"Basic {key}"
     headers = {
-        "Authorization": f"Basic {key}",
+        "Authorization": auth_header,
         "RqUID": str(uuid.uuid4()),
         "Content-Type": "application/x-www-form-urlencoded",
         "Accept": "application/json",
