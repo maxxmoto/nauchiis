@@ -1572,9 +1572,6 @@
     if (article.id === 'course-guide') {
       html += '<div class="course-og"><img src="static/social/og.webp" alt="научИИсь — обложка курса" width="1000" height="597" loading="eager" decoding="async"></div>';
     }
-    if (article.id === 'intro') {
-      html += '<div class="video-embed"><iframe src="https://vkvideo.ru/video_ext.php?oid=-138398280&amp;id=456241166&amp;hash=9e51925893e3c9e6" width="640" height="360" frameborder="0" allowfullscreen="1" style="background-color:#000" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Видео: Вайбкодинг — полное введение"></iframe></div>';
-    }
     html += buildArticleTOC(doc);
     html += '<div class="prose">' + article.content + '</div>';
     if (article.id === 'exam') html += buildFinalExam();
